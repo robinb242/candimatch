@@ -1,272 +1,305 @@
-import _ from 'lodash'
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import {AnswerOptions} from './components/AnswerOptions';
 import {
-  Container, Divider, Dropdown, Grid, Header, Icon, Image, List, Menu, Segment, Visibility,
+  Form, Checkbox, Button, Card, Statistic, Container, Grid, Header, Icon, Image, Item, Label, Menu, Segment, Sticky, Step, Table, Divider, Dropdown
 } from 'semantic-ui-react'
 
-const menuStyle = {
-  border: 'none',
-  borderRadius: 0,
-  boxShadow: 'none',
-  marginBottom: '1em',
-  marginTop: '4em',
-  transition: 'box-shadow 0.5s ease, padding 0.5s ease',
-}
+export default class App extends Component {
+  state = { activeItem: 'home' }
 
-const fixedMenuStyle = {
-  backgroundColor: '#fff',
-  border: '1px solid #ddd',
-  boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.2)',
-}
-
-const overlayStyle = {
-  float: 'left',
-  margin: '0em 3em 1em 0em',
-}
-
-const fixedOverlayStyle = {
-  ...overlayStyle,
-  position: 'fixed',
-  top: '80px',
-  zIndex: 10,
-}
-
-const overlayMenuStyle = {
-  position: 'relative',
-  left: 0,
-  transition: 'left 0.5s ease',
-}
-
-const fixedOverlayMenuStyle = {
-  ...overlayMenuStyle,
-  left: '800px',
-}
-
-const LeftImage = () => (
-  <Image
-    floated='left'
-    size='medium'
-    src='MNStateSeal35px.png'
-    style={{ margin: '2em 2em 2em -4em' }}
-  />
-)
-
-const RightImage = () => (
-  <Image
-    floated='right'
-    size='medium'
-     src='MNStateSeal35px.png'
-    style={{ margin: '2em -4em 2em 2em' }}
-  />
-)
-
-const Paragraph = () => (
-  <p>
-    {[
-      'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ',
-      'tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas ',
-      'semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ',
-      'ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean ',
-      'fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. ',
-      'Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor ',
-      'neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, ',
-      'accumsan porttitor, facilisis luctus, metus',
-    ].join('')}
-  </p>
-)
-
-export default class StickyLayout extends Component {
-  state = {
-    menuFixed: false,
-    overlayFixed: false,
-  }
-
-  handleOverlayRef = (c) => {
-    const { overlayRect } = this.state
-
-    if (!overlayRect) this.setState({ overlayRect: _.pick(c.getBoundingClientRect(), 'height', 'width') })
-  }
-
-  stickOverlay = () => this.setState({ overlayFixed: true })
-
-  stickTopMenu = () => this.setState({ menuFixed: true })
-
-  unStickOverlay = () => this.setState({ overlayFixed: false })
-
-  unStickTopMenu = () => this.setState({ menuFixed: false })
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
-    const { menuFixed, overlayFixed, overlayRect } = this.state
+    const { activeItem } = this.state
 
     return (
+    
+    <div className = "ui container ">
       <div>
-        {/* Heads up, style below isn't necessary for correct work of example, simply our docs defines other
-            background color.
-          */}
-        <style>{`
-          html, body {
-            background: #fff;
-          }
-        `}</style>
+        <Menu pointing secondary>
+          <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
+          <Menu.Item name='messages' active={activeItem === 'messages'} onClick={this.handleItemClick} />
+          <Menu.Item name='friends' active={activeItem === 'friends'} onClick={this.handleItemClick} />
+          <Menu.Menu position='right'>
+            <Menu.Item name='logout' active={activeItem === 'logout'} onClick={this.handleItemClick} />
+          </Menu.Menu>
+        </Menu>
+      </div>
 
-        <Container text style={{ marginTop: '2em' }}>
-          <Header as='h1'>Sticky Example</Header>
-          <p>This example shows how to use lazy loaded images, a sticky menu, and a simple text container</p>
-        </Container>
+      <div className = "ui container">
+      <Container textAlign='center'>
+         <b>Find a Candidate for Minnesota Governor in 2018 whose platform matches your values</b>
+          <Divider />
 
-        {/* Attaching the top menu is a simple operation, we only switch `fixed` prop and add another style if it has
-            gone beyond the scope of visibility
-          */}
-        <Visibility
-          onBottomPassed={this.stickTopMenu}
-          onBottomVisible={this.unStickTopMenu}
-          once={false}
-        >
-          <Menu
-            borderless
-            fixed={menuFixed && 'top'}
-            style={menuFixed ? fixedMenuStyle : menuStyle}
-          >
-            <Container text>
-              <Menu.Item>
-                <Image size='tiny' src='MNStateSeal35px.png' />
-              </Menu.Item>
-              <Menu.Item header>Project Name</Menu.Item>
-              <Menu.Item as='a'>Blog</Menu.Item>
-              <Menu.Item as='a'>Articles</Menu.Item>
+          <p>After two terms in the governor’s office, Democrat Mark Dayton is stepping down, leaving a wide open field that has plenty of candidates clamoring to get in. On the DFL side, that includes a tight race for the endorsement between a U.S. representative, the current state auditor and a legislator from St. Paul. On the Republican side, a crowded field of candidates have emerged, including a former party chairman, a suburban mayor, a county commissioner and plenty of rank-and-file activists. But the entrance of a former governor into the race suggests a possible Republican primary race ahead.</p>
+          <p>No matter what happens, 2018 will be a banner year in Minnesota politics.An open seat in the Minnesota governor’s office has already attracted more than a dozen candidates in both parties, which has in turn created a vacuum that’s left other state offices with open — and suddenly competitive — races.</p>
+         <h4>Click on the butoon below to take our quiz to see which candidate's platform most closely relects your values</h4>
 
-              <Menu.Menu position='right'>
-                <Dropdown text='Dropdown' pointing className='link item'>
-                  <Dropdown.Menu>
-                    <Dropdown.Item>List Item</Dropdown.Item>
-                    <Dropdown.Item>List Item</Dropdown.Item>
-                    <Dropdown.Divider />
-                    <Dropdown.Header>Header Item</Dropdown.Header>
-                    <Dropdown.Item>
-                      <i className='dropdown icon' />
-                      <span className='text'>Submenu</span>
-                      <Dropdown.Menu>
-                        <Dropdown.Item>List Item</Dropdown.Item>
-                        <Dropdown.Item>List Item</Dropdown.Item>
-                      </Dropdown.Menu>
-                    </Dropdown.Item>
-                    <Dropdown.Item>List Item</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-              </Menu.Menu>
-            </Container>
-          </Menu>
-        </Visibility>
-
-        <Container text>
-          { _.times(3, i => <Paragraph key={i} />) }
-
-          {/* Example with overlay menu is more complex, SUI simply clones all elements inside, but we should use a
-              different approach.
-              An empty Visibility element controls the need to change the fixing of element below, it also uses height
-              and width params received from its ref for correct display.
-            */}
-          <Visibility
-            offset={80}
-            once={false}
-            onTopPassed={this.stickOverlay}
-            onTopVisible={this.unStickOverlay}
-            style={overlayFixed ? { ...overlayStyle, ...overlayRect } : {}}
-          />
-
-          <div
-            ref={this.handleOverlayRef}
-            style={overlayFixed ? fixedOverlayStyle : overlayStyle}
-          >
-            <Menu
-              icon='labeled'
-              style={overlayFixed ? fixedOverlayMenuStyle : overlayMenuStyle}
-              vertical
-            >
-              <Menu.Item>
-                <Icon name='twitter' />
-               Twitter
-              </Menu.Item>
-
-              <Menu.Item >
-                <Icon name='facebook' />
-               Share
-              </Menu.Item>
-
-              <Menu.Item>
-                <Icon name='mail' />
-               Email
-              </Menu.Item>
-            </Menu>
+          <div className ="ui inverted segment">
+          <button className="ui inverted green basic button">Find Your Candidate!</button>
           </div>
 
-          { _.times(3, i => <Paragraph key={i} />) }
-          <LeftImage />
+          
 
-          <Paragraph />
-          <RightImage />
+    
+      <div>
+         <Button animated = 'fade'>
+          <Button.Content visible>Take Survey</Button.Content>
+           <Button.Content hidden>
+            <Icon name='edit' />
+           </Button.Content>
+           </Button>
 
-          { _.times(4, i => <Paragraph key={i} />) }
-          <LeftImage />
+          <Button animated = 'fade'>
+           <Button.Content visible>Research Issues</Button.Content>
+            <Button.Content hidden>
+            <Icon name='shop' />
+           </Button.Content>
+          </Button>
 
-          <Paragraph />
-          <RightImage />
+          <Button animated='fade'>
+            <Button.Content visible>Research Candidates
+            </Button.Content>
+            <Button.Content hidden>
+              $12.99 a month
+            </Button.Content>
+          </Button>
+        </div>
+    </Container>
+  
 
-          { _.times(2, i => <Paragraph key={i} />) }
-        </Container>
+    //GRIDS
+    _____________________________________________________________________
 
-        <Segment
-          inverted
-          style={{ margin: '5em 0em 0em', padding: '5em 0em' }}
-          vertical
-        >
-          <Container textAlign='center'>
-            <Grid columns={4} divided stackable inverted>
-              <Grid.Row>
-                <Grid.Column>
-                  <Header inverted as='h4' content='Group 1' />
-                  <List link inverted>
-                    <List.Item as='a'>Link One</List.Item>
-                    <List.Item as='a'>Link Two</List.Item>
-                    <List.Item as='a'>Link Three</List.Item>
-                    <List.Item as='a'>Link Four</List.Item>
-                  </List>
-                </Grid.Column>
-                <Grid.Column>
-                  <Header inverted as='h4' content='Group 2' />
-                  <List link inverted>
-                    <List.Item as='a'>Link One</List.Item>
-                    <List.Item as='a'>Link Two</List.Item>
-                    <List.Item as='a'>Link Three</List.Item>
-                    <List.Item as='a'>Link Four</List.Item>
-                  </List>
-                </Grid.Column>
-                <Grid.Column>
-                  <Header inverted as='h4' content='Group 3' />
-                  <List link inverted>
-                    <List.Item as='a'>Link One</List.Item>
-                    <List.Item as='a'>Link Two</List.Item>
-                    <List.Item as='a'>Link Three</List.Item>
-                    <List.Item as='a'>Link Four</List.Item>
-                  </List>
-                </Grid.Column>
-                <Grid.Column>
-                  <Header inverted as='h4' content='Footer Header' />
-                  <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
-            <Divider inverted section />
-            <Image src='/logo.png' centered size='mini' />
-            <List horizontal inverted divided link>
-              <List.Item as='a' href='#'>Site Map</List.Item>
-              <List.Item as='a' href='#'>Contact Us</List.Item>
-              <List.Item as='a' href='#'>Terms and Conditions</List.Item>
-              <List.Item as='a' href='#'>Privacy Policy</List.Item>
-            </List>
-          </Container>
-        </Segment>
+    <Grid columns={2}>
+    <Grid.Column>
+      <Segment raised>
+        <Label as='a' color='red' ribbon>Tim Waltz</Label>
+        <span>DFL</span>
+
+        <Image src='https://s3.amazonaws.com/data.minnpost/projects/minnpost-whos-running-2018/candidate-photos/tim-walz-head_150.jpg' ahref="http://www.walzforgovernor.org/" />
+
+        <Label as='a' color='blue' ribbon>Community</Label>
+        <span>User Reviews</span>
+
+        <Image src='http://via.placeholder.com/150x150' />
+      </Segment>
+    </Grid.Column>
+
+    <Grid.Column>
+      <Segment>
+        <Label as='a' color='orange' ribbon='right'>Specs</Label>
+        <Image src='http://via.placeholder.com/150x150' />
+
+        <Label as='a' color='teal' ribbon='right'>Reviews</Label>
+        <Image src='http://via.placeholder.com/150x150' />
+      </Segment>
+    </Grid.Column>
+  </Grid>
+      
+
+    <Segment stacked>
+      <h3>Access to abortions should be a state decision..</h3>
+
+  
+        <Form>
+        <Form.Field>
+          Choose how you feel about the question: <b>{this.state.value}</b>
+        </Form.Field>
+        <Form.Field>
+          <Checkbox
+            radio
+            label='Strongly Disagree'
+            name='checkboxRadioGroup'
+            value='this'
+            checked={this.state.value === 'this'}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
+        <Form.Field>
+          <Checkbox
+            radio
+            label='Disagree'
+            name='checkboxRadioGroup'
+            value='that'
+            checked={this.state.value === 'that'}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
+         <Form.Field>
+          <Checkbox
+            radio
+            label='Somewhat Disagree'
+            name='checkboxRadioGroup'
+            value='that'
+            checked={this.state.value === 'that'}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
+         <Form.Field>
+          <Checkbox
+            radio
+            label='Somewhat Agree'
+            name='checkboxRadioGroup'
+            value='that'
+            checked={this.state.value === 'that'}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
+        <Form.Field>
+          <Checkbox
+            radio
+            label='Agree'
+            name='checkboxRadioGroup'
+            value='that'
+            checked={this.state.value === 'that'}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
+      </Form>
+    </Segment>
+
+
+    <Segment stacked>
+      <h3>Gun ownership is a 2nd Amendment right and should not be regulated.</h3>
+
+  
+        <Form>
+        <Form.Field>
+          Choose how you feel about the question: <b>{this.state.value}</b>
+        </Form.Field>
+        <Form.Field>
+          <Checkbox
+            radio
+            label='Strongly Disagree'
+            name='checkboxRadioGroup'
+            value='this'
+            checked={this.state.value === 'this'}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
+        <Form.Field>
+          <Checkbox
+            radio
+            label='Disagree'
+            name='checkboxRadioGroup'
+            value='that'
+            checked={this.state.value === 'that'}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
+         <Form.Field>
+          <Checkbox
+            radio
+            label='Somewhat Disagree'
+            name='checkboxRadioGroup'
+            value='that'
+            checked={this.state.value === 'that'}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
+         <Form.Field>
+          <Checkbox
+            radio
+            label='Somewhat Agree'
+            name='checkboxRadioGroup'
+            value='that'
+            checked={this.state.value === 'that'}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
+        <Form.Field>
+          <Checkbox
+            radio
+            label='Agree'
+            name='checkboxRadioGroup'
+            value='that'
+            checked={this.state.value === 'that'}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
+      </Form>
+    </Segment>
+
+    <Segment stacked>
+      <h3>Development of renewable energy (e.g. solar, wind, thermal) should be supported by government funding.</h3>
+
+  
+        <Form>
+        <Form.Field>
+          Choose how you feel about the question: <b>{this.state.value}</b>
+        </Form.Field>
+        <Form.Field>
+          <Checkbox
+            radio
+            label='Strongly Disagree'
+            name='checkboxRadioGroup'
+            value='this'
+            checked={this.state.value === 'this'}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
+        <Form.Field>
+          <Checkbox
+            radio
+            label='Disagree'
+            name='checkboxRadioGroup'
+            value='that'
+            checked={this.state.value === 'that'}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
+         <Form.Field>
+          <Checkbox
+            radio
+            label='Somewhat Disagree'
+            name='checkboxRadioGroup'
+            value='that'
+            checked={this.state.value === 'that'}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
+         <Form.Field>
+          <Checkbox
+            radio
+            label='Somewhat Agree'
+            name='checkboxRadioGroup'
+            value='that'
+            checked={this.state.value === 'that'}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
+        <Form.Field>
+          <Checkbox
+            radio
+            label='Agree'
+            name='checkboxRadioGroup'
+            value='that'
+            checked={this.state.value === 'that'}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
+      </Form>
+    </Segment>
+
+    </div>
+
+      <div className = "ui container">
+        <div className = "ui green inverted message">
+          <div className = "header">
+            Register To Vote
+          </div>
+            <p>Find your polling place.</p>
+        </div>
+        <hr />
+
       </div>
+                
+    </div>
+
     )
   }
 }
+

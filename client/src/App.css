@@ -1,3 +1,30 @@
+body {
+  background-image: url('/assets/imgages/background.jpeg') !important;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.landing-image {
+    background-image: url('assets/images/background.jpeg') !important;
+    background-size: cover !important;
+}
+
+.test-image {
+  background-image: url('assets/images/me.jpg') !important;
+}
+
+html {
+  background: url('assets/images/background.jpeg') no-repeat center center fixed !important;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
 .App {
   text-align: center;
 }
