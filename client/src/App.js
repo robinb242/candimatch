@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import _ from 'lodash'
 import logo from './logo.svg';
 import './App.css';
 import {AnswerOptions} from './components/AnswerOptions';
 import {
-  Form, Checkbox, Button, Card, Statistic, Container, Grid, Header, Icon, Image, Item, Label, Menu, Segment, Sticky, Step, Table, Divider, Dropdown
+  Form, Checkbox, Button, Card, Statistic, Container, Rail, Grid, Header, Icon, Image, Item, Label, Menu, Segment, Sticky, Step, Table, Divider, Dropdown
 } from 'semantic-ui-react'
 
 export default class App extends Component {
@@ -16,35 +17,89 @@ export default class App extends Component {
 
     return (
     
-    <div className = "ui container ">
+    <div className = "ui container">
+    {/* MENU BAR*/}
       <div>
         <Menu pointing secondary>
           <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
-          <Menu.Item name='messages' active={activeItem === 'messages'} onClick={this.handleItemClick} />
-          <Menu.Item name='friends' active={activeItem === 'friends'} onClick={this.handleItemClick} />
+          <Menu.Item name='about' active={activeItem === 'about'} onClick={this.handleItemClick} />
+          <Menu.Item name='news' active={activeItem === 'news'} onClick={this.handleItemClick} />
           <Menu.Menu position='right'>
-            <Menu.Item name='logout' active={activeItem === 'logout'} onClick={this.handleItemClick} />
+            <Menu.Item name='login' active={activeItem === 'login'} onClick={this.handleItemClick} />
           </Menu.Menu>
-        </Menu>
+        </Menu> 
       </div>
+    
+    {/* MAIN HEADER*/}
+    <div classname="ui grid">
+      <div className="row">
+        <div className="column ten wide">
+          <div className = "ui container">
+            <Container textAlign='center'>
+               <b>Find a Candidate for Minnesota Governor in 2018 whose platform matches your values</b>
+                <Divider />
 
-      <div className = "ui container">
-      <Container textAlign='center'>
-         <b>Find a Candidate for Minnesota Governor in 2018 whose platform matches your values</b>
-          <Divider />
+                <p>After two terms in the governor’s office, Democrat Mark Dayton is stepping down, leaving a wide open field that has plenty of candidates clamoring to get in. On the DFL side, that includes a tight race for the endorsement between a U.S. representative, the current state auditor and a legislator from St. Paul. On the Republican side, a crowded field of candidates have emerged, including a former party chairman, a suburban mayor, a county commissioner and plenty of rank-and-file activists. But the entrance of a former governor into the race suggests a possible Republican primary race ahead.</p>
+                <p>No matter what happens, 2018 will be a banner year in Minnesota politics.An open seat in the Minnesota governor’s office has already attracted more than a dozen candidates in both parties, which has in turn created a vacuum that’s left other state offices with open — and suddenly competitive — races.</p>
+               <h4>Click on the button below to take our quiz to see which candidate's platform most closely relects your values</h4>
+            </Container>
+          </div>
+        </div>
 
-          <p>After two terms in the governor’s office, Democrat Mark Dayton is stepping down, leaving a wide open field that has plenty of candidates clamoring to get in. On the DFL side, that includes a tight race for the endorsement between a U.S. representative, the current state auditor and a legislator from St. Paul. On the Republican side, a crowded field of candidates have emerged, including a former party chairman, a suburban mayor, a county commissioner and plenty of rank-and-file activists. But the entrance of a former governor into the race suggests a possible Republican primary race ahead.</p>
-          <p>No matter what happens, 2018 will be a banner year in Minnesota politics.An open seat in the Minnesota governor’s office has already attracted more than a dozen candidates in both parties, which has in turn created a vacuum that’s left other state offices with open — and suddenly competitive — races.</p>
-         <h4>Click on the butoon below to take our quiz to see which candidate's platform most closely relects your values</h4>
+{/*Side Menu*/}
+        <div className="column six wide">
+          <Menu vertical>
+            <Menu.Item>
+            <Menu.Header>My Voting Booth</Menu.Header>
+            <Menu.Menu>
+              <Menu.Item name='enterprise' active={activeItem === 'enterprise'} onClick={this.handleItemClick} />
+              <Menu.Item name='consumer' active={activeItem === 'consumer'} onClick={this.handleItemClick} />
+            </Menu.Menu>
+          </Menu.Item>
 
+          <Menu.Item>
+            <Menu.Header>Research Issues</Menu.Header>
+
+            <Menu.Menu>
+              <Menu.Item name='rails' active={activeItem === 'rails'} onClick={this.handleItemClick} />
+              <Menu.Item name='python' active={activeItem === 'python'} onClick={this.handleItemClick} />
+              <Menu.Item name='php' active={activeItem === 'php'} onClick={this.handleItemClick} />
+            </Menu.Menu>
+          </Menu.Item>
+
+          <Menu.Item>
+            <Menu.Header>Research Candidates</Menu.Header>
+
+            <Menu.Menu>
+              <Menu.Item name='shared' active={activeItem === 'shared'} onClick={this.handleItemClick} />
+              <Menu.Item name='dedicated' active={activeItem === 'dedicated'} onClick={this.handleItemClick} />
+            </Menu.Menu>
+          </Menu.Item>
+
+          <Menu.Item>
+            <Menu.Header>Support</Menu.Header>
+
+            <Menu.Menu>
+              <Menu.Item name='email' active={activeItem === 'email'} onClick={this.handleItemClick}>
+                E-mail Support
+              </Menu.Item>
+
+              <Menu.Item name='faq' active={activeItem === 'faq'} onClick={this.handleItemClick}>
+                FAQs
+              </Menu.Item>
+            </Menu.Menu>
+          </Menu.Item>
+        </Menu>
+      </div> 
+    </div>
+    
+    {/*FIND YOUR CANDIDATE BUTTON, CLICK TO START QUIZ*/}
           <div className ="ui inverted segment">
           <button className="ui inverted green basic button">Find Your Candidate!</button>
           </div>
 
-          
-
-    
       <div>
+        <menu vertical>
          <Button animated = 'fade'>
           <Button.Content visible>Take Survey</Button.Content>
            <Button.Content hidden>
@@ -66,9 +121,21 @@ export default class App extends Component {
               $12.99 a month
             </Button.Content>
           </Button>
+        </menu>
         </div>
-    </Container>
+    
     <br />
+
+    <div class="ui two column doubling stackable grid container">
+      <div class="column">
+        <p>Test</p>
+        <p>one</p>
+      </div>
+      <div class="column">
+        <p>two</p>
+        <p>three</p>
+      </div>
+    </div>
   
 
     <Grid columns={2}>
@@ -326,11 +393,15 @@ export default class App extends Component {
             <p>Find your polling place.</p>
         </div>
         <hr />
+{/* Grids */}
+   
 
       </div>
                 
     </div>
-
+    
+     
+  
     )
   }
 }
