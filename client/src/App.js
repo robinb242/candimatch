@@ -35,7 +35,7 @@ export default class App extends Component {
 
           <p>After two terms in the governor’s office, Democrat Mark Dayton is stepping down, leaving a wide open field that has plenty of candidates clamoring to get in. On the DFL side, that includes a tight race for the endorsement between a U.S. representative, the current state auditor and a legislator from St. Paul. On the Republican side, a crowded field of candidates have emerged, including a former party chairman, a suburban mayor, a county commissioner and plenty of rank-and-file activists. But the entrance of a former governor into the race suggests a possible Republican primary race ahead.</p>
           <p>No matter what happens, 2018 will be a banner year in Minnesota politics.An open seat in the Minnesota governor’s office has already attracted more than a dozen candidates in both parties, which has in turn created a vacuum that’s left other state offices with open — and suddenly competitive — races.</p>
-         <h4>Click on the butoon below to take our quiz to see which candidate's platform most closely relects your values</h4>
+         <h4>Click on the button below to take our quiz to see which candidate's platform most closely relects your values</h4>
 
           <div className ="ui inverted segment">
           <button className="ui inverted green basic button">Find Your Candidate!</button>
@@ -142,7 +142,6 @@ export default class App extends Component {
         </Form.Field>
         <Form.Field>
           <Checkbox
-            radio
             label='Strongly Disagree'
             name='checkboxRadioGroup'
             value='this'
