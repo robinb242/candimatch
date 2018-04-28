@@ -46,6 +46,7 @@ export default class App extends Component {
           </div>
         </div>
 
+
 {/*Side Menu*/}
         <div className="column six wide">
           <Menu vertical>
@@ -94,6 +95,7 @@ export default class App extends Component {
     </div>
     
     {/*FIND YOUR CANDIDATE BUTTON, CLICK TO START QUIZ*/}
+
           <div className ="ui inverted segment">
           <button className="ui inverted green basic button">Find Your Candidate!</button>
           </div>
@@ -209,7 +211,6 @@ export default class App extends Component {
         </Form.Field>
         <Form.Field>
           <Checkbox
-            radio
             label='Strongly Disagree'
             name='checkboxRadioGroup'
             value='this'

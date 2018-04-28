@@ -2,27 +2,41 @@ import React from "react";
 
 
  const AnswerOptions = [
-  {
-       text: 'Strongly Disagree',
+  
+    {
+      text: 'Strongly Disagree',
      	value: '1'
-   },
+    },
    
-   {
-       text: 'Disagree',
+    {
+      text: 'Disagree',
      	value: '2'
-   },
-   {
-       text: 'Somewhat Disagree',
+    },
+
+    {
+      text: 'Somewhat Disagree',
      	value: '3'
-   },
-   {
-       text: 'Somewhat Agree',
-     	value: '4'
-   },
-   {
-       text: 'Agree',
+    },
+
+    {
+      text: 'No Opinion',
+      value: '4'
+    },
+
+    {
+      text: 'Somewhat Agree',
      	value: '5'
-   }
+    },
+
+    {
+      text: 'Agree',
+     	value: '6'
+    },
+
+    {
+      text: 'Strongly Agree',
+      value: '7'
+    }
  ];
 
 export default AnswerOptions;
