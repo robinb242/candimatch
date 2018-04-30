@@ -30,69 +30,7 @@ export default class App extends Component {
         </Menu> 
       </div>
     
-    {/* MAIN HEADER*/}
-    <div classname="ui grid">
-      <div className="row">
-        <div className="column ten wide">
-          <div className = "ui container">
-            <Container textAlign='center'>
-               <b>Find a Candidate for Minnesota Governor in 2018 whose platform matches your values</b>
-                <Divider />
-
-                <p>After two terms in the governor’s office, Democrat Mark Dayton is stepping down, leaving a wide open field that has plenty of candidates clamoring to get in. On the DFL side, that includes a tight race for the endorsement between a U.S. representative, the current state auditor and a legislator from St. Paul. On the Republican side, a crowded field of candidates have emerged, including a former party chairman, a suburban mayor, a county commissioner and plenty of rank-and-file activists. But the entrance of a former governor into the race suggests a possible Republican primary race ahead.</p>
-                <p>No matter what happens, 2018 will be a banner year in Minnesota politics.An open seat in the Minnesota governor’s office has already attracted more than a dozen candidates in both parties, which has in turn created a vacuum that’s left other state offices with open — and suddenly competitive — races.</p>
-               <h4>Click on the button below to take our quiz to see which candidate's platform most closely relects your values</h4>
-            </Container>
-          </div>
-        </div>
-
-
-{/*Side Menu*/}
-        <div className="column six wide">
-          <Menu vertical>
-            <Menu.Item>
-            <Menu.Header>My Voting Booth</Menu.Header>
-            <Menu.Menu>
-              <Menu.Item name='enterprise' active={activeItem === 'enterprise'} onClick={this.handleItemClick} />
-              <Menu.Item name='consumer' active={activeItem === 'consumer'} onClick={this.handleItemClick} />
-            </Menu.Menu>
-          </Menu.Item>
-
-          <Menu.Item>
-            <Menu.Header>Research Issues</Menu.Header>
-
-            <Menu.Menu>
-              <Menu.Item name='rails' active={activeItem === 'rails'} onClick={this.handleItemClick} />
-              <Menu.Item name='python' active={activeItem === 'python'} onClick={this.handleItemClick} />
-              <Menu.Item name='php' active={activeItem === 'php'} onClick={this.handleItemClick} />
-            </Menu.Menu>
-          </Menu.Item>
-
-          <Menu.Item>
-            <Menu.Header>Research Candidates</Menu.Header>
-
-            <Menu.Menu>
-              <Menu.Item name='shared' active={activeItem === 'shared'} onClick={this.handleItemClick} />
-              <Menu.Item name='dedicated' active={activeItem === 'dedicated'} onClick={this.handleItemClick} />
-            </Menu.Menu>
-          </Menu.Item>
-
-          <Menu.Item>
-            <Menu.Header>Support</Menu.Header>
-
-            <Menu.Menu>
-              <Menu.Item name='email' active={activeItem === 'email'} onClick={this.handleItemClick}>
-                E-mail Support
-              </Menu.Item>
-
-              <Menu.Item name='faq' active={activeItem === 'faq'} onClick={this.handleItemClick}>
-                FAQs
-              </Menu.Item>
-            </Menu.Menu>
-          </Menu.Item>
-        </Menu>
-      </div> 
-    </div>
+    
     
     {/*FIND YOUR CANDIDATE BUTTON, CLICK TO START QUIZ*/}
 
@@ -130,12 +68,61 @@ export default class App extends Component {
 
     <div class="ui two column doubling stackable grid container">
       <div class="column">
-        <p>Test</p>
-        <p>one</p>
-      </div>
+       <div className = "ui container">
+          <Container textAlign='center'>
+             <b>Find a Candidate for Minnesota Governor in 2018 whose platform matches your values</b>
+              <Divider />
+
+              <p>After two terms in the governor’s office, Democrat Mark Dayton is stepping down, leaving a wide open field that has plenty of candidates clamoring to get in. On the DFL side, that includes a tight race for the endorsement between a U.S. representative, the current state auditor and a legislator from St. Paul. On the Republican side, a crowded field of candidates have emerged, including a former party chairman, a suburban mayor, a county commissioner and plenty of rank-and-file activists. But the entrance of a former governor into the race suggests a possible Republican primary race ahead.</p>
+              <p>No matter what happens, 2018 will be a banner year in Minnesota politics.An open seat in the Minnesota governor’s office has already attracted more than a dozen candidates in both parties, which has in turn created a vacuum that’s left other state offices with open — and suddenly competitive — races.</p>
+             <h4>Click on the button below to take our quiz to see which candidate's platform most closely relects your values</h4>
+            </Container>
+          </div>
+        </div>
+
       <div class="column">
-        <p>two</p>
-        <p>three</p>
+                <Menu vertical>
+            <Menu.Item>
+            <Menu.Header>My Voting Booth</Menu.Header>
+            <Menu.Menu>
+              <Image src='https://cdn4.iconfinder.com/data/icons/democracy/500/Political_2-512.png' href='https://www.rebeccaotto.com/' />
+              <Menu.Item name='consumer' active={activeItem === 'consumer'} onClick={this.handleItemClick} />
+            </Menu.Menu>
+          </Menu.Item>
+
+          <Menu.Item>
+            <Menu.Header>Research Issues</Menu.Header>
+
+            <Menu.Menu>
+              <Image src='https://cdn4.iconfinder.com/data/icons/democracy/500/Political_3-512.png' href='https://www.rebeccaotto.com/' />
+              <Menu.Item name='python' active={activeItem === 'python'} onClick={this.handleItemClick} />
+              <Menu.Item name='php' active={activeItem === 'php'} onClick={this.handleItemClick} />
+            </Menu.Menu>
+          </Menu.Item>
+
+          <Menu.Item>
+            <Menu.Header>Research Candidates</Menu.Header>
+
+            <Menu.Menu>
+                 <Image src='https://cdn3.iconfinder.com/data/icons/gray-user-toolbar/512/reporter-512.png' />
+              <Menu.Item name='dedicated' active={activeItem === 'dedicated'} onClick={this.handleItemClick} />
+            </Menu.Menu>
+          </Menu.Item>
+
+          <Menu.Item>
+            <Menu.Header>Support</Menu.Header>
+
+            <Menu.Menu>
+              <Menu.Item name='email' active={activeItem === 'email'} onClick={this.handleItemClick}>
+                E-mail Support
+              </Menu.Item>
+
+              <Menu.Item name='faq' active={activeItem === 'faq'} onClick={this.handleItemClick}>
+                FAQs
+              </Menu.Item>
+            </Menu.Menu>
+          </Menu.Item>
+        </Menu>
       </div>
     </div>
   
@@ -383,23 +370,22 @@ export default class App extends Component {
         </Form.Field>
       </Form>
     </Segment>
-
-    </div>
-
-      <div className = "ui container">
+     <div className = "ui container">
         <div className = "ui green inverted message">
           <div className = "header">
             Register To Vote
           </div>
+          <Image src='https://cdn4.iconfinder.com/data/icons/democracy/500/Political_2-512.png' href='https://www.rebeccaotto.com/' />
             <p>Find your polling place.</p>
         </div>
-        <hr />
-{/* Grids */}
+
+     </div>
+
    
 
       </div>
                 
-    </div>
+    
     
      
   
