@@ -1,3 +1,7 @@
+#vertMenuItem {
+  box-sizing: border-box;
+  height:50 px !important;
+}
 body {
   background-image: url('/assets/imgages/background.jpeg') !important;
   background-repeat: no-repeat; 
