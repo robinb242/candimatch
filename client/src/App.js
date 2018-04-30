@@ -33,7 +33,7 @@ export default class App extends Component {
      
   
  <br />
-  {/* EXPERIMENTING WITH MAIN BODY*/}   
+  {/* MAIN BODY*/}   
     <div>
       <Grid>
         <Grid.Row>
