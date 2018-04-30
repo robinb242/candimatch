@@ -1,9 +1,9 @@
 #vertMenuItem {
   box-sizing: border-box;
-  height:50 px !important;
+  height:50 px;
 }
 body {
-  background-image: url('/assets/imgages/background.jpeg') !important;
+  background-image: url("assets/images/background2.jpg") !important;
   background-repeat: no-repeat; 
   background-size: cover;
   -webkit-background-size: cover;
@@ -19,7 +19,7 @@ body {
 }
 
 .test-image {
-  background-image: url('assets/images/me.jpg') !important;
+  background-image: url('assets/images/me.jpg');
 }
 
 html {

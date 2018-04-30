@@ -17,7 +17,7 @@ export default class App extends Component {
 
     return (
     
-    <div className = "ui container">
+    <div className = "ui container landing-page">
     {/* MENU BAR*/}
       <div>
         <Menu pointing secondary>
