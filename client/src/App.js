@@ -17,10 +17,10 @@ export default class App extends Component {
 
     return (
     
-    <div className = "ui container landing-page">
+    <div className = "ui container">
     {/* MENU BAR*/}
       <div>
-        <Menu pointing secondary>
+        <Menu pointing secondary inverted>
           <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
           <Menu.Item name='about' active={activeItem === 'about'} onClick={this.handleItemClick} />
           <Menu.Item name='news' active={activeItem === 'news'} onClick={this.handleItemClick} />
@@ -38,16 +38,20 @@ export default class App extends Component {
       <Grid>
         <Grid.Row>
           <Grid.Column width={13}>
-            <div className = "ui container">
-              <Container textAlign='center'>
-               <b>Find a Candidate for Minnesota Governor in 2018 whose platform matches your values</b>
-                <Divider />
+            <Container textAlign='center'>
+             <b>Find a Candidate for Minnesota Governor in 2018 whose platform matches your values</b>
+              <Divider />
 
-                <p>After two terms in the governor’s office, Democrat Mark Dayton is stepping down, leaving a wide open field that has plenty of candidates clamoring to get in. On the DFL side, that includes a tight race for the endorsement between a U.S. representative, the current state auditor and a legislator from St. Paul. On the Republican side, a crowded field of candidates have emerged, including a former party chairman, a suburban mayor, a county commissioner and plenty of rank-and-file activists. But the entrance of a former governor into the race suggests a possible Republican primary race ahead.</p>
-                <p>No matter what happens, 2018 will be a banner year in Minnesota politics.An open seat in the Minnesota governor’s office has already attracted more than a dozen candidates in both parties, which has in turn created a vacuum that’s left other state offices with open — and suddenly competitive — races.</p>
-               <h4>Click on the button below to take our quiz to see which candidate's platform most closely relects your values</h4>
-            </Container>
-           </div>
+              <p>After two terms in the governor’s office, Democrat Mark Dayton is stepping down, leaving a wide open field that has plenty of candidates clamoring to get in. On the DFL side, that includes a tight race for the endorsement between a U.S. representative, the current state auditor and a legislator from St. Paul. On the Republican side, a crowded field of candidates have emerged, including a former party chairman, a suburban mayor, a county commissioner and plenty of rank-and-file activists. But the entrance of a former governor into the race suggests a possible Republican primary race ahead.</p>
+              <p>No matter what happens, 2018 will be a banner year in Minnesota politics.An open seat in the Minnesota governor’s office has already attracted more than a dozen candidates in both parties, which has in turn created a vacuum that’s left other state offices with open — and suddenly competitive — races.</p>
+             <h4>Click on the button below to take our quiz to see which candidate's platform most closely reflects your values</h4>
+             <br />
+              
+{/*FIND YOUR CANDIDATE BUTTON, CLICK TO START QUIZ*/}
+            <div className ="ui inverted segment">
+              <button className="ui inverted green huge button fluid">Find Your Candidate!</button>
+            </div>
+            </Container> 
           </Grid.Column>
         
 
@@ -58,30 +62,26 @@ export default class App extends Component {
       <div>
         <Grid.Column width={3}>
           <Menu vertical>
-            <Menu.Item id="vertMenuItem">
+            <Menu.Item id="vertMenuItem" active={activeItem === 'faq'} onClick={this.handleItemClick}>
             <Menu.Header>My Voting Booth</Menu.Header>
             <Menu.Menu>
-              <Image src='https://cdn4.iconfinder.com/data/icons/democracy/500/Political_2-512.png' href='https://www.rebeccaotto.com/' />
-              <Menu.Item name='consumer' active={activeItem === 'consumer'} onClick={this.handleItemClick} />
+              <Image id="vertMenuIcon" height="60" src='https://cdn4.iconfinder.com/data/icons/democracy/500/Political_2-512.png'/>
             </Menu.Menu>
           </Menu.Item>
 
-          <Menu.Item id="vertMenuItem">
+          <Menu.Item id="vertMenuItem" active={activeItem === 'faq'} onClick={this.handleItemClick}>
             <Menu.Header>Research Issues</Menu.Header>
 
             <Menu.Menu>
-              <Image src='https://cdn4.iconfinder.com/data/icons/democracy/500/Political_3-512.png' href='https://www.rebeccaotto.com/' />
-              <Menu.Item name='python' active={activeItem === 'python'} onClick={this.handleItemClick} />
-              <Menu.Item name='php' active={activeItem === 'php'} onClick={this.handleItemClick} />
+              <Image id="vertMenuIcon" height="60" src='https://cdn4.iconfinder.com/data/icons/democracy/500/Political_3-512.png'  />
             </Menu.Menu>
           </Menu.Item>
 
-          <Menu.Item id="vertMenuItem">
+          <Menu.Item id="vertMenuItem" onClick={this.handleItemClick}>
             <Menu.Header>Research Candidates</Menu.Header>
 
             <Menu.Menu>
-                 <Image src='https://cdn3.iconfinder.com/data/icons/gray-user-toolbar/512/reporter-512.png' />
-              <Menu.Item name='dedicated' active={activeItem === 'dedicated'} onClick={this.handleItemClick} />
+                 <Image id="vertMenuIcon" height="60" src='https://cdn3.iconfinder.com/data/icons/gray-user-toolbar/512/reporter-512.png' />
             </Menu.Menu>
           </Menu.Item>
 
@@ -89,12 +89,11 @@ export default class App extends Component {
             <Menu.Header>Support</Menu.Header>
 
             <Menu.Menu>
-              <Menu.Item name='email' active={activeItem === 'email'} onClick={this.handleItemClick}>
-                E-mail Support
-              </Menu.Item>
-
               <Menu.Item name='faq' active={activeItem === 'faq'} onClick={this.handleItemClick}>
                 FAQs
+              </Menu.Item>
+              <Menu.Item name='contact' active={activeItem === 'contact'} onClick={this.handleItemClick}>
+                Contact
               </Menu.Item>
             </Menu.Menu>
           </Menu.Item>
@@ -106,10 +105,6 @@ export default class App extends Component {
 </div>
 
 
-{/*FIND YOUR CANDIDATE BUTTON, CLICK TO START QUIZ*/}
-     <div className ="ui inverted segment">
-          <button className="ui inverted green huge button fluid">Find Your Candidate!</button>
-          </div>
 
  {/* Experimental animated menu bar*/}   
       <div>

@@ -1,7 +1,15 @@
 #vertMenuItem {
   box-sizing: border-box;
-  height:50 px;
+  height:95px;
 }
+
+#vertMenuIcon {
+
+  height:65px;
+  float: right;
+  }
+
+
 body {
   background-image: url("assets/images/background2.jpg") !important;
   background-repeat: no-repeat; 
