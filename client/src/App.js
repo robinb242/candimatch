@@ -134,7 +134,7 @@ export default class App extends Component {
         </div>
     
 
-  {/* */}   
+  {/* Candidate Profiles*/}   
     <Grid columns={2}>
     <Grid.Column>
       <Segment raised>
@@ -384,7 +384,7 @@ export default class App extends Component {
           <div className = "header">
             Register To Vote
           </div>
-          <Image src='https://cdn4.iconfinder.com/data/icons/democracy/500/Political_2-512.png' href='https://www.rebeccaotto.com/' />
+          <Image src='https://cdn4.iconfinder.com/data/icons/democracy/500/Political_2-512.png' href='https://www.sos.state.mn.us/elections-voting/register-to-vote' />
             <p>Find your polling place.</p>
         </div>
 

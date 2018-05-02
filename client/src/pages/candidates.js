@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import _ from 'lodash'
 import './Candidate.css';
@@ -68,65 +69,8 @@ const Home =() => (
       </Segment>
     </Grid.Column>
   </Grid>
+</div>
 
- 
+);
 
-    <Segment stacked>
-      <h3>Access to abortions should be a state decision..</h3>
-
-  
-        <Form>
-        <Form.Field>
-          Choose how you feel about the question: <b>{this.state.value}</b>
-        </Form.Field>
-        <Form.Field>
-          <Checkbox
-            label='Strongly Disagree'
-            name='checkboxRadioGroup'
-            value='this'
-            checked={this.state.value === 'this'}
-            onChange={this.handleChange}
-          />
-        </Form.Field>
-        <Form.Field>
-          <Checkbox
-            radio
-            label='Disagree'
-            name='checkboxRadioGroup'
-            value='that'
-            checked={this.state.value === 'that'}
-            onChange={this.handleChange}
-          />
-        </Form.Field>
-         <Form.Field>
-          <Checkbox
-            radio
-            label='Somewhat Disagree'
-            name='checkboxRadioGroup'
-            value='that'
-            checked={this.state.value === 'that'}
-            onChange={this.handleChange}
-          />
-        </Form.Field>
-         <Form.Field>
-          <Checkbox
-            radio
-            label='Somewhat Agree'
-            name='checkboxRadioGroup'
-            value='that'
-            checked={this.state.value === 'that'}
-            onChange={this.handleChange}
-          />
-        </Form.Field>
-        <Form.Field>
-          <Checkbox
-            radio
-            label='Agree'
-            name='checkboxRadioGroup'
-            value='that'
-            checked={this.state.value === 'that'}
-            onChange={this.handleChange}
-          />
-        </Form.Field>
-      </Form>
-    </Segment>
+export default Candidates;
