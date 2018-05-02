@@ -5,7 +5,7 @@ import './App.css';
 import {AnswerOptions} from './components/AnswerOptions';
 import {
   Form, Checkbox, Button, Card, Statistic, Container, Rail, Grid, Header, Icon, Image, Item, Label, Menu, Segment, Sticky, Step, Table, Divider, Dropdown
-} from 'semantic-ui-react'
+} from 'semantic-ui-react';
 
 export default class App extends Component {
   state = { activeItem: 'home' }
