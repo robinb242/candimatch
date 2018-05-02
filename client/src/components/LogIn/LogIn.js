@@ -50,6 +50,6 @@ const LoginForm = () => (
       </Grid.Column>
     </Grid>
   </div>
-)
+);
 
 export default LoginForm
