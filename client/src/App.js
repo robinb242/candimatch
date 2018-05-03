@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Candidates from './pages/candidates';
 import Home from './pages/home';
 
+
 const App = () => (
   <div> 
     <Nav />
@@ -14,11 +15,10 @@ const App = () => (
       
     </Router>
 
+   
+
   </div>
 
-
-
-
-  );
+);
 
 export default App;
