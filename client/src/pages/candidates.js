@@ -1,16 +1,17 @@
 
 import React, { Component } from 'react';
 import _ from 'lodash'
-import './Candidate.css';
+// import './Candidate.css';
 import {
    Card, Container,  Grid, Header, Icon, Label, Image, Segment
 } from 'semantic-ui-react'
 
 
-const Home =() => (
-	{/* CANDIDATE PORTAL */}   
-   
-    <Grid columns={2}>
+const Candidates =() => (
+	
+<div>
+    <div>
+  <Grid columns={2}>
     <Grid.Column>
       <Segment raised>
 
@@ -69,6 +70,7 @@ const Home =() => (
       </Segment>
     </Grid.Column>
   </Grid>
+</div>
 </div>
 
 );
