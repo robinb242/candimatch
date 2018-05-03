@@ -1,12 +1,19 @@
- import React from 'react';
- import {
-  Form, Checkbox, Button, Card, Statistic, Container, Rail, Grid, Header, Icon, Image, Item, Label, Menu, Segment, Sticky, Step, Table, Divider, Dropdown
-} from 'semantic-ui-react'
+
+import React from "react";
+import { Menu, Grid, Container, Divider, Image, Button } from 'semantic-ui-react'
+
+{/* MAIN BODY*/}  
+const Home =() => ( 
+   
+
 
  const Home = props => {
   return (
-
+ <div>
+      <Grid>
+        <Grid.Row>
     <Grid.Column width={13}>
+
             <Container textAlign='center'>
              <b>Find a Candidate for Minnesota Governor in 2018 whose platform matches your values</b>
               <Divider />
@@ -17,12 +24,65 @@
              <br />
               
 
-            <div className ="ui inverted segment">
-              <button className="ui inverted green huge button fluid">Find Your Candidate!</button>
+{/*FIND YOUR CANDIDATE BUTTON, CLICK TO START QUIZ*/}
+            <div>
+              <Button inverted color='green' size='massive'>Find Your Candidate</Button>
             </div>
             </Container> 
           </Grid.Column>
-          )
-        }
-        
-        export default Home;
+
+
+    {/* EXPERIMENTING WITH Vertical menu bar */}   
+      
+        <Grid.Column width={3}>
+          <Menu vertical>
+            <Menu.Item id="vertMenuItem" active={activeItem === 'faq'} onClick={this.handleItemClick}>
+            <Menu.Header>My Voting Booth</Menu.Header>
+            <Menu.Menu>
+              <Image id="vertMenuIcon" height="60" src='https://cdn4.iconfinder.com/data/icons/democracy/500/Political_2-512.png'/>
+            </Menu.Menu>
+          </Menu.Item>
+
+          <Menu.Item id="vertMenuItem" active={activeItem === 'faq'} onClick={this.handleItemClick}>
+            <Menu.Header>Research Issues</Menu.Header>
+
+            <Menu.Menu>
+              <Image id="vertMenuIcon" height="60" src='https://cdn4.iconfinder.com/data/icons/democracy/500/Political_3-512.png'  />
+            </Menu.Menu>
+          </Menu.Item>
+
+          <Menu.Item id="vertMenuItem" onClick={this.handleItemClick}>
+            <Menu.Header>Research Candidates</Menu.Header>
+
+            <Menu.Menu>
+                 <Image id="vertMenuIcon" height="60" src='https://cdn3.iconfinder.com/data/icons/gray-user-toolbar/512/reporter-512.png' />
+            </Menu.Menu>
+          </Menu.Item>
+
+          <Menu.Item>
+            <Menu.Header>Support</Menu.Header>
+
+            <Menu.Menu>
+              <Menu.Item name='faq' active={activeItem === 'faq'} onClick={this.handleItemClick}>
+                FAQs
+              </Menu.Item>
+              <Menu.Item name='contact' active={activeItem === 'contact'} onClick={this.handleItemClick}>
+                Contact
+              </Menu.Item>
+            </Menu.Menu>
+          </Menu.Item>
+        </Menu>
+      </Grid.Column>
+  </Grid.Row>
+</Grid>
+
+</div>
+
+
+);
+
+export default Home;
+
+
+
+
