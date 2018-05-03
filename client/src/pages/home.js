@@ -1,12 +1,19 @@
+
 import React from "react";
 import { Menu, Grid, Container, Divider, Image, Button } from 'semantic-ui-react'
 
 {/* MAIN BODY*/}  
 const Home =() => ( 
-    <div>
+   
+
+
+ const Home = props => {
+  return (
+ <div>
       <Grid>
         <Grid.Row>
-          <Grid.Column width={13}>
+    <Grid.Column width={13}>
+
             <Container textAlign='center'>
              <b>Find a Candidate for Minnesota Governor in 2018 whose platform matches your values</b>
               <Divider />
@@ -16,6 +23,7 @@ const Home =() => (
              <h4>Click on the button below to take our quiz to see which candidate's platform most closely reflects your values</h4>
              <br />
               
+
 {/*FIND YOUR CANDIDATE BUTTON, CLICK TO START QUIZ*/}
             <div>
               <Button inverted color='green' size='massive'>Find Your Candidate</Button>
@@ -74,6 +82,7 @@ const Home =() => (
 );
 
 export default Home;
+
 
 
 
