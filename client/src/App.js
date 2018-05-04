@@ -8,7 +8,7 @@ import Home from './pages/home';
 
 
 const App = () => (
-<<<<<<< HEAD
+
     <div>
       <Nav />
       <Router>
@@ -17,20 +17,7 @@ const App = () => (
   		</Router>
   	<Footer />
   	</div>
-=======
-  <div> 
-    <Nav />
 
-    <Router>
-      <Route exact path = "/" component = {Home} />
-      
-    </Router>
-
-   
-
-  </div>
-
->>>>>>> 0a9f6529807e960374232904cbee0533015c55aa
 );
 
 export default App;
