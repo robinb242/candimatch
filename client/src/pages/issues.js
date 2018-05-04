@@ -68,5 +68,5 @@ const Issues =() => (
  </div>
 	
 
-	);
+	)
 	export default Issues;

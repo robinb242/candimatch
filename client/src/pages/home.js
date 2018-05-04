@@ -1,12 +1,19 @@
- import React from 'react';
- import {
-  Form, Checkbox, Button, Card, Statistic, Container, Rail, Grid, Header, Icon, Image, Item, Label, Menu, Segment, Sticky, Step, Table, Divider, Dropdown
-} from 'semantic-ui-react'
 
- const Home = props => {
-  return (
 
+import React from "react";
+import VertMenu from '../components/VertMenu';
+import { Menu, Grid, Container, Divider, Image, Button } from 'semantic-ui-react'
+
+{/* MAIN BODY*/}  
+
+ const Home = () => (
+
+	
+ <div>
+      <Grid>
+        <Grid.Row>
     <Grid.Column width={13}>
+
       <Container textAlign='center'>
         <b>Find a Candidate for Minnesota Governor in 2018 whose platform matches your values</b>
           
@@ -29,3 +36,4 @@
   }
   
   export default Home;
+
