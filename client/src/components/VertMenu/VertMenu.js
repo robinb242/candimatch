@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Menu, Image } from 'semantic-ui-react'
 
 export default class VertMenu extends Component {
   handleItemClick = name => this.setState({ activeItem: name })
