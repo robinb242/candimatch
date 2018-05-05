@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import { Menu, Image } from 'semantic-ui-react'
+import React, { Component } from 'react';
+import { Menu, Image } from 'semantic-ui-react';
+import "./VertMenu.css";
 
 export default class VertMenu extends Component {
   handleItemClick = name => this.setState({ activeItem: name })
@@ -12,7 +13,7 @@ export default class VertMenu extends Component {
             <Menu.Item id="vertMenuItem" active={activeItem === 'faq'} onClick={this.handleItemClick}>
             <Menu.Header>My Voting Booth</Menu.Header>
             <Menu.Menu>
-              <Image id="vertMenuIcon" height="60" src='https://cdn4.iconfinder.com/data/icons/democracy/500/Political_2-512.png'/>
+              <Image id="vertMenuIcon" height="60" src={require('../../assets/images/votingBoxIcon.png')}/>
             </Menu.Menu>
           </Menu.Item>
 
@@ -20,7 +21,7 @@ export default class VertMenu extends Component {
             <Menu.Header>Research Issues</Menu.Header>
 
             <Menu.Menu>
-              <Image id="vertMenuIcon" height="60" src='https://cdn4.iconfinder.com/data/icons/democracy/500/Political_3-512.png'  />
+              <Image id="vertMenuIcon" height="60" src={require('../../assets/images/capitolBldg.png')}  />
             </Menu.Menu>
           </Menu.Item>
 
@@ -28,22 +29,18 @@ export default class VertMenu extends Component {
             <Menu.Header>Research Candidates</Menu.Header>
 
             <Menu.Menu>
-                 <Image id="vertMenuIcon" height="60" src='https://cdn3.iconfinder.com/data/icons/gray-user-toolbar/512/reporter-512.png' />
+                 <Image id="vertMenuIcon" height="60" src={require('../../assets/images/candidateIcon.png')} />
             </Menu.Menu>
           </Menu.Item>
 
-          <Menu.Item>
-            <Menu.Header>Support</Menu.Header>
+          <Menu.Item id="vertMenuItem" onClick={this.handleItemClick}>
+            <Menu.Header>Find Your Polling Place</Menu.Header>
 
             <Menu.Menu>
-              <Menu.Item name='faq' active={activeItem === 'faq'} onClick={this.handleItemClick}>
-                FAQs
-              </Menu.Item>
-              <Menu.Item name='contact' active={activeItem === 'contact'} onClick={this.handleItemClick}>
-                Contact
-              </Menu.Item>
+                 <Image id="vertMenuIcon" height="60" src={require('../../assets/images/votingBoxIcon.png')} />
             </Menu.Menu>
           </Menu.Item>
+
         </Menu>
         )
 }
