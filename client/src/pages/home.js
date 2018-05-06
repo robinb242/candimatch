@@ -10,10 +10,12 @@ import { Menu, Grid, Container, Divider, Image, Button } from 'semantic-ui-react
 
 	
  <div>
+ <Container>
   <Grid>
     <Grid.Row>
       <Grid.Column width={13}>
         <Container textAlign='center'>
+         <Image src={require('../assets/images/MNstateCapitol.jpg')} fluid />
           <b>Find a Candidate for Minnesota Governor in 2018 whose platform matches your values</b>
             
           <Divider />
@@ -38,6 +40,7 @@ import { Menu, Grid, Container, Divider, Image, Button } from 'semantic-ui-react
       </Grid.Column>
     </Grid.Row>
   </Grid>
+  </Container>
   </div>
     );
   

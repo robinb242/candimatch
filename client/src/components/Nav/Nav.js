@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import { Menu } from 'semantic-ui-react'
+import "./Nav.css";
 
 export default class Nav extends Component {
   state = {}
