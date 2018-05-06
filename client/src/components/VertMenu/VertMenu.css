@@ -1,0 +1,7 @@
+#vertmenuItem {
+	box-sizing: border-box;
+  	height:95px;
+	 position: absolute;
+    right: 0px;
+	color: blue;
+}
