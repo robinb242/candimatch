@@ -14,8 +14,7 @@ class Home extends React.Component {
   };
 
   render() {
-    return 
-    <div>
+    return <div>
      <Container>
       <Grid>
         <Grid.Row>
