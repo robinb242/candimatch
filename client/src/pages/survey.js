@@ -26,7 +26,7 @@ const Survey = () => (
 		       <br />
 		        
 		        <div className ="ui inverted segment">
-		          <button className="ui inverted green huge button fluid"></button>
+		          <button className="ui inverted green huge button fluid">Submit Survey</button>
 		        </div>
 		      </Container> 
     		</Grid.Column>
