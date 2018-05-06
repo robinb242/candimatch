@@ -2,7 +2,10 @@ import React from "react";
 import VertMenu from '../components/VertMenu';
 import { Menu, Grid, Container, Divider, Image, Button } from 'semantic-ui-react'
 
+
+
 const Survey = () => (
+		// console.log ("handlePageLoad function");
 
   <div>
     <Grid>
@@ -23,7 +26,7 @@ const Survey = () => (
 		       <br />
 		        
 		        <div className ="ui inverted segment">
-		          <button className="ui inverted green huge button fluid">Find My Candidate!</button>
+		          <button className="ui inverted green huge button fluid"></button>
 		        </div>
 		      </Container> 
     		</Grid.Column>
