@@ -15,8 +15,11 @@ export default class VertMenu extends Component {
             <Menu.Header>My Voting Booth</Menu.Header>
             <Menu.Menu>
               <Image 
+              id="vertMenuIcon" 
               size="tiny"
-              src={require('../../assets/images/votingBoxIcon.png')}/>
+              src={require('../../assets/images/votingBoxIcon.png')}
+              href="https://www.sos.state.mn.us/elections-voting/register-to-vote" 
+              />
             </Menu.Menu>
           </Menu.Item>
 
@@ -27,7 +30,10 @@ export default class VertMenu extends Component {
               <Image 
               id="vertMenuIcon" 
               size="tiny"
-              src={require('../../assets/images/capitolBldg.png')}  />
+              src={require('../../assets/images/capitolBldg.png')}
+              href="https://www.leg.state.mn.us/lrl/guides/" 
+              target="_blank"
+                />
             </Menu.Menu>
           </Menu.Item>
 
@@ -38,7 +44,24 @@ export default class VertMenu extends Component {
                  <Image 
                  id="vertMenuIcon"
                   size="tiny"
-                 src={require('../../assets/images/candidateIcon.png')} />
+                 src={require('../../assets/images/candidateIcon.png')}
+                 href="../pages/candidates" 
+                  />
+            </Menu.Menu>
+          </Menu.Item>
+
+          <Menu.Item id="vertMenuItem" onClick={this.handleItemClick}>
+            <Menu.Header>Register Yo Vote</Menu.Header>
+
+            <Menu.Menu>
+                 <Image 
+
+                 id="vertMenuIcon" 
+                 size="tiny"
+                 src={require("../../assets/images/vote.png")}
+                 href="https://www.sos.state.mn.us/elections-voting/register-to-vote" 
+                 target="_blank"
+                 />
             </Menu.Menu>
           </Menu.Item>
 
@@ -51,7 +74,7 @@ export default class VertMenu extends Component {
                  id="vertMenuIcon" 
                  size="tiny"
                  src={require("../../assets/images/votingBoxIcon.png")}
-                 href="https://www.sos.state.mn.us/elections-voting/register-to-vote" 
+                 href="https://pollfinder.sos.state.mn.us/" 
                  target="_blank"
                  />
             </Menu.Menu>
