@@ -12,13 +12,15 @@ import "./App.css";
 const App = () => (
 <Router>
     <div>
-      <Nav />
-      <Switch>
+    	<Nav />
+      	<Switch>
 
-        <Route exact path="/" component={Home} />
-        <Route exact path="/pages/survey" component={Survey} />
-      <Route path ="/pages/candidates" compoonenet={Candidates} /> 
+          <Route exact path="/" component={Home} />
+          <Route exact path="/pages/survey" component={Survey} />
+          <Route path ="/pages/candidates" component={Candidates} /> 
+
   		</Switch>
+  		
   		<Footer />
   	</div>
  </Router>
