@@ -23,8 +23,7 @@ const Survey = () => (
 		        <p>More Instructions.</p>
 
 		        <div>
-		        	<h1>!!The form should load here!!</h1>
-		       		<Questions />
+		        	<Questions />
 		       	</div>
 		         		        		       
 		       	<h4>You have finished the survey. Click the button below to find your matching candidate.</h4>
