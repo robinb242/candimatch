@@ -1,22 +1,7 @@
-
-
-#vertMenuItem {
-  box-sizing: border-box;
-  height:140px;
-  max-width: 260px;
-  margin: auto;
-  background-color: #1fb13d;
-  padding-bottom: 0px;
-
-}
-
-#vertMenuIcon {
-
-  height: 65px;
-  float: right;
-  padding-bottom: 0px;
-  }
-.Menu {
-	width: 150px;
-	
+#vertmenuItem {
+	box-sizing: border-box;
+  	height:95px;
+	 position: absolute;
+    right: 0px;
+	color: blue;
 }

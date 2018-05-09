@@ -1,4 +1,13 @@
+#vertMenuItem {
+  box-sizing: border-box;
+  height:95px;
+}
 
+#vertMenuIcon {
+
+  height:65px;
+  float: right;
+  }
 
 
 body {
@@ -74,7 +83,7 @@ html {
       background-color: rgba(86, 61, 124, .15);
       box-shadow: 0px 0px 0px 1px rgba(86, 61, 124, 0.2) inset;
       content: '';
-      display: none;
+      display: block;
       min-height: 50px;
     }
     @media only screen and (max-width: 768px) {
