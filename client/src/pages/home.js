@@ -36,7 +36,7 @@ class Home extends React.Component {
                   to="/survey"
                     onClick={this.handleClick}
                      // onClick= "console.log ("insde home.js click")"
-                    className="ui inverted green huge button fluid">Find My Candidate!
+                    className="ui inverted huge button fluid">Find My Candidate!
                   </Link>
                 </div>
             </Container> 
