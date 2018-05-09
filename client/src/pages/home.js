@@ -30,24 +30,24 @@ import "./home.css";
          
          <h4>Click on the button below to take our quiz to see which candidate's platform most closely reflects your values</h4>
          
-         <br />
-          
-          <div className ="ui inverted segment">
-            <button className="ui inverted green huge button fluid">
-         <Link to="/pages/Survey" className="nav-link"> Find Your Candidate!  </Link> </button>
-          </div>
-
-        </Container> 
-      </Grid.Column>
-
-      <Grid.Column width={4} id="fourWideColumn">
-      <VertMenu />
-      </Grid.Column>
-    </Grid.Row>
-  </Grid>
-  </Container>
-  </div>
-    );
-  
-  export default Home;
-
+          <br />
+                
+                <div className ="ui inverted segment">
+                  <Link
+                  to="/survey"
+                    onClick={this.handleClick}
+                     // onClick= "console.log ("insde home.js click")"
+                    className="ui inverted green huge button fluid">Find My Candidate!
+                  </Link>
+                </div>
+            </Container> 
+          </Grid.Column>
+          <Grid.Column width={3}>
+            <VertMenu />
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+     </Container>
+    </div>
+  );
+export default Home;
