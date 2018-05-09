@@ -1,18 +1,36 @@
 -- Insert a set of records.
 
-USE issues_db;
+USE answers_db;
 
-INSERT INTO issues (issue_name, question_1, question_2, question_3, answer_q1, answer_q2, answer_q3) 
-VALUES ('Issue-A', 'Question-A1', 'Question-A2', 'Question-A3'),
+INSERT INTO can_ans1 (issue_name, question_1, question_2, question_3) 
+VALUES ('Issue-A', 'Answer1', 'Answer2', 'Answer3'),
+
+USE answers_db;
+
+INSERT INTO can_ans2 (issue_name, question_1, question_2, question_3) 
+VALUES ('Issue-B', 'Answer1', 'Answer2', 'Answer3'),
 
 
+USE answers_db;
+
+INSERT INTO can_ans3 (issue_name, question_1, question_2, question_3) 
+VALUES ('Issue-C', 'Answer1', 'Answer2', 'Answer3'),
 
 
-USE issues_db;
- createdAt
-INSERT INTO user (user_name, user_pwd, issue_name, answer_q1, answer_q2, answer_q3),
-VALUES ('User-1', 'Pwd-1','Ans-A1', 'Ans-A2', 'Ans-A3'),
+USE answers_db;
 
+INSERT INTO user_ans1 (issue_name, answer_1, answer_2, answer_3),
+VALUES ('Issue-A', 'Answer1', 'Answer2', 'Answer3'),
+
+USE answers_db;
+
+INSERT INTO user_ans2 (issue_name, answer_1, answer_2, answer_3),
+VALUES ('Issue-A', 'Answer1', 'Answer2', 'Answer3'),
+
+USE answers_db;
+
+INSERT INTO user_ans3 (issue_name, answer_1, answer_2, answer_3),
+VALUES ('Issue-A', 'Answer1', 'Answer2', 'Answer3'),
 -- MySQL will not take a path to upload a file, it must be handled by fs
 
 -- Good example here:  http://www.technicalkeeda.com/nodejs-tutorials/nodejs-store-image-into-mysql-database
