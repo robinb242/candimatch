@@ -17,7 +17,7 @@ export default class VertMenu extends Component {
               <Image 
               id="vertMenuIcon" 
               size="tiny"
-              src={require('../../assets/images/votingBoxIcon.png')}
+              src={require('../../assets/images/VotingBoxIcon.png')}
               href="https://www.sos.state.mn.us/elections-voting/register-to-vote" 
               />
             </Menu.Menu>
@@ -30,7 +30,7 @@ export default class VertMenu extends Component {
               <Image 
               id="vertMenuIcon" 
               size="tiny"
-              src={require('../../assets/images/capitolBldg.png')}
+              src={require('../../assets/images/CapitolBldg.png')}
               href="https://www.leg.state.mn.us/lrl/guides/" 
               target="_blank"
                 />
@@ -51,7 +51,7 @@ export default class VertMenu extends Component {
           </Menu.Item>
 
           <Menu.Item id="vertMenuItem" onClick={this.handleItemClick}>
-            <Menu.Header>Register Yo Vote</Menu.Header>
+            <Menu.Header>Register To Vote</Menu.Header>
 
             <Menu.Menu>
                  <Image 
@@ -73,7 +73,7 @@ export default class VertMenu extends Component {
 
                  id="vertMenuIcon" 
                  size="tiny"
-                 src={require("../../assets/images/votingBoxIcon.png")}
+                 src={require("../../assets/images/VotingBoxIcon.png")}
                  href="https://pollfinder.sos.state.mn.us/" 
                  target="_blank"
                  />
