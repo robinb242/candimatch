@@ -10,7 +10,7 @@ export default class VertMenu extends Component {
 
     return (
      
-    	 <Menu vertical className="Menu">
+    	 <Menu vertical>
             <Menu.Item id="vertMenuItem" active={activeItem === 'faq'} onClick={this.handleItemClick}>
             <Menu.Header>My Voting Booth</Menu.Header>
             <Menu.Menu>
@@ -51,7 +51,7 @@ export default class VertMenu extends Component {
           </Menu.Item>
 
           <Menu.Item id="vertMenuItem" onClick={this.handleItemClick}>
-            <Menu.Header>Register To Vote</Menu.Header>
+            <Menu.Header>Register Yo Vote</Menu.Header>
 
             <Menu.Menu>
                  <Image 

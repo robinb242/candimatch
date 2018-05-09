@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { Menu, Container } from 'semantic-ui-react'
+import { Menu } from 'semantic-ui-react'
 import "./Nav.css";
 import { Link } from "react-router-dom"
 
@@ -14,8 +14,7 @@ export default class Nav extends Component {
     const { activeItem } = this.state
 
     return (
-      <Container>
-      <Menu id="Nav">
+      <Menu>
         <Menu.Item header>CandiMatch</Menu.Item>
         <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick}>
           <Link to="/" className="nav-link">  Home </Link> 
@@ -32,7 +31,6 @@ export default class Nav extends Component {
         	<Menu.Item name='candidate login' active={activeItem === 'candidate login'} onClick={this.handleItemClick} />
         </Menu.Menu>
       </Menu>
-      </Container>
     )
   }
 }
