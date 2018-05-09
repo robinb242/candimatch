@@ -1,17 +1,20 @@
-
-
 import React from "react";
-import { Link } from "react-router-dom"
 import VertMenu from '../components/VertMenu';
-import { Menu, Grid, Container, Divider, Image, Button, } from 'semantic-ui-react'
 import "./home.css";
+import { Menu, Grid, Container, Divider, Image, Button } from 'semantic-ui-react'
+import {Link} from 'react-router-dom';
+
 {/* MAIN BODY*/}  
 
- const Home = () => (
 
-	
- <div>
- <Container>
+class Home extends React.Component {
+  handleClick = (event) => {
+    console.log ("handlePageLoad function");
+  };
+
+  render() {
+    return <div>
+      <Container>
   <Grid>
     <Grid.Row>
       <Grid.Column width={12}>
@@ -46,8 +49,8 @@ import "./home.css";
     </Grid.Row>
   </Grid>
   </Container>
-  </div>
-    );
-  
-  export default Home;
+    </div>
+  }
+}
 
+export default Home;
