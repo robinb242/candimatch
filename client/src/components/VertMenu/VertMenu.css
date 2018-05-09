@@ -1,7 +1,18 @@
-#vertmenuItem {
-	box-sizing: border-box;
-  	height:95px;
-	 position: absolute;
-    right: 0px;
-	color: blue;
+
+#vertMenuItem {
+  box-sizing: border-box;
+  height:140px;
+width: auto;
+  background-color: #1fb13d;
+  float: none;
+}
+
+#vertMenuIcon {
+
+  height:65px;
+  float: right;
+  }
+
+.ui.vertical.menu {
+		width: auto;
 }
