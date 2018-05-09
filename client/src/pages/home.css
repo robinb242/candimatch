@@ -1,8 +1,0 @@
-#fourWideColumn {
-box-sizing: border-box;
-margin: auto;
-}
-
-.grid.column:not(.row):not(.grid):after {
-	display: hide;
-}
