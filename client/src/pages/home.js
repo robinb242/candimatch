@@ -20,7 +20,7 @@ class Home extends React.Component {
           <Grid.Column width={12}>
             <Container textAlign='center'>
 
-              <Image src={require('../assets/images/MNstateCapitol.jpg')} fluid />
+              <Image id="capitolImage" src={require('../assets/images/MNstateCapitol.jpg')} fluid />
               <b>Find a Candidate for Minnesota Governor in 2018 whose platform matches your values</b>
                   
               <Divider />
