@@ -29,7 +29,9 @@ export default class Nav extends Component {
          <Link to="/pages/news" className="nav-link">  News </Link>
          </Menu.Item>
         <Menu.Menu position='right'>
-        	<Menu.Item name='candidate login' active={activeItem === 'candidate login'} onClick={this.handleItemClick} />
+        	<Menu.Item name='candidate login' active={activeItem === 'candidate login'} onClick={this.handleItemClick} >
+           <Link to="/candilogin" className="nav-link">  Candidate Log In </Link> 
+          </Menu.Item>
         </Menu.Menu>
       </Menu>
       </Container>

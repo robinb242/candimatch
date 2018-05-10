@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import Candidates from './pages/candidates';
 import Home from './pages/home';
 import Survey from './pages/survey';
+import userPage from './pages/userPage';
+import CandiLogIn from './components/CandiLogIn';
 import "./App.css";
 
 
@@ -17,7 +19,9 @@ const App = () => (
 
           <Route exact path="/" component={Home} />
           <Route exact path="/survey" component={Survey} />
-          <Route path ="/pages/candidates" component={Candidates} /> 
+          <Route path ="/pages/candidates" component={Candidates} />
+          <Route path = "/userpage" component = {userPage} />
+          <Route path = "/candilogin" component = {CandiLogIn} />
 
   		</Switch>
   		
