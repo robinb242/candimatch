@@ -1,7 +1,11 @@
 .Image {
 	float: left;
+
 }
 
 span {
 	float: right;
+}
+div.four.wide.column {
+	padding: 1px;
 }
