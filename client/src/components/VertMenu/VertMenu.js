@@ -18,7 +18,8 @@ export default class VertMenu extends Component {
               id="vertMenuIcon" 
               size="tiny"
               src={require('../../assets/images/VotingBoxIcon.png')}
-              href="https://www.sos.state.mn.us/elections-voting/register-to-vote" 
+              href="https://www.sos.state.mn.us/elections-voting/register-to-vote"
+              target="_blank" 
               />
             </Menu.Menu>
           </Menu.Item>
