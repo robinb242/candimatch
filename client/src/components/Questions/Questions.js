@@ -1,14 +1,22 @@
 import React, {Component} from "react";
 import {
-  Form, Checkbox, Button, Card, Statistic, Container, Rail, Grid, Header, Icon, Image, Item, Label, Menu, Segment, Sticky, Step, Table, Divider, Dropdown
+  Form, Checkbox, Button, Card, Statistic, Container, Rail, Grid, Header, Icon, Image, Item, Label, Menu, Segment, Sticky, Step, Table, Divider, Dropdown, Modal
 } from 'semantic-ui-react'
 import "./Questions.css";
 
 class Questions extends Component {
-  state={}
+  state={
+    total: 0
+  }
 
 
-handleChange= () => {}
+handleChange= (event, data) => {
+  const { name, value } = data;
+  console.log(name, value);
+  this.setState({
+    total: this.state.total + parseInt(value)
+  }, ()=>console.log(this.state))
+}
 
   render () {
     return (

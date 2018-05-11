@@ -1,0 +1,33 @@
+
+
+<script type="text/javascript">
+
+//This is a fail safe. If need be this can be placed within Questions.js.
+//The info added to the handlechange and state will hold the total value from the survey.
+//This function will then find the closest candidate matched based on total question value.
+//Once this is inside of Questions.js uncomment out state.total
+//With the submit survey you'll have to change the event to open a modal saying something
+//like "You have successfully matched with can5!" instead of redirecting to a new page.
+
+
+var can1 = 9
+var can2 = 18
+var can3 = 27
+var can4 = 36
+var can5 = 45
+var can6 = 54
+var can7 = 63
+var can8 = 72
+var can9 = 81
+
+var canarray = [can1, can2, can3, can4, can5, can6, can7, can8, can9]
+
+var user = //state.total
+
+var closest = canarray.reduce(function(prev, curr) {
+  return (Math.abs(curr - user) < Math.abs(prev - user) ? curr : prev);
+});
+
+console.log(closest);
+
+</script>
