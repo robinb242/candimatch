@@ -63,6 +63,21 @@ const Candidates =() => (
         </Grid>
        <br />
 
+        <Label as='a' color='green' href="https://www.votewright.org/" target="_blank" ribbon>Chris Wright</Label>
+        <span>Independence</span>
+    <br />
+        <Grid celled>
+            <Grid.Row>
+                <Grid.Column width={4}>
+                   <Image src={require('../assets/images/candidateImages/chris-wright_150.jpg')} size="tiny" href="https://www.votewright.org/"  target="_blank" />
+                </Grid.Column>
+                <Grid.Column width={12}>
+                    <span>Chris Wright is running for governor as a Grassroots party candidate. His platform includes the legalization of marijuana.</span>
+                 </Grid.Column>
+            </Grid.Row>
+        </Grid>
+       <br />
+
      <Label as='a' color='orange' href="https://www.facebook.com/jennylrhoades/" target="_blank" ribbon>Jenny Rhoades</Label>
         <span>Independence</span>
         <br />
@@ -88,22 +103,6 @@ const Candidates =() => (
                 </Grid.Column>
                 <Grid.Column width={12}>
                     <span> "I am James Everett and I am running for Governor of Minnesota. I am a creative visionary who utilizes my influencing skills to connect intersecting concepts with real life results. I have over 20 years experience navigating the political pathways of local politics and community needs."</span>
-                 </Grid.Column>
-            </Grid.Row>
-        </Grid>
-       <br />
-
-
-     <Label as='a' color='green' href="https://www.votewright.org/" target="_blank" ribbon>Chris Wright</Label>
-        <span>Independence</span>
-    <br />
-        <Grid celled>
-            <Grid.Row>
-                <Grid.Column width={4}>
-                   <Image src={require('../assets/images/candidateImages/chris-wright_150.jpg')} size="tiny" href="https://www.votewright.org/"  target="_blank" />
-                </Grid.Column>
-                <Grid.Column width={12}>
-                    <span>Chris Wright is running for governor as a Grassroots party candidate. His platform includes the legalization of marijuana.</span>
                  </Grid.Column>
             </Grid.Row>
         </Grid>
@@ -139,7 +138,7 @@ const Candidates =() => (
                    <Image src={require('../assets/images/candidateImages/tim-pawlenty_150.jpg')} size="tiny" href="http://www.timpawlenty.com/"   target="_blank" />
                 </Grid.Column>
                 <Grid.Column width={12}>
-                  <span>Former two-term Republican Gov. Tim Pawlenty announced in April that he plans to run for a third term in the governor's office. He announced his campaign with a video, talking about the squeezed middle class and the need to make college more affordable, cut down on health care fraud, eliminate taxes on social security benefits and go after the drug companies responsible for the opioid crisis.</span>
+                  <span>Former two-term Republican Gov. Tim Pawlenty announced his campaign with a video, talking about the squeezed middle class and the need to make college more affordable, cut down on health care fraud, eliminate taxes on social security benefits and go after the drug companies responsible for the opioid crisis.</span>
                  </Grid.Column>
             </Grid.Row>
         </Grid>
@@ -176,17 +175,17 @@ const Candidates =() => (
         </Grid>
         <br />
 
-     <Label as='a' color='red' href="https://www.facebook.com/whartonforminnesota2018/" target="_blank" ribbon>Jeffrey Ryan Wharton</Label>
+         <Label as='a' color='red' href="http://www.votebobagain.com/" target="_blank" ribbon>Bob Carney</Label>
         <span>GOP</span>
 
-           <br />
+        <br />
         <Grid celled>
             <Grid.Row>
                 <Grid.Column width={4}>
-                   <Image src={require('../assets/images/candidateImages/jeffrey-ryan-wharton.jpg')} size="tiny" href="https://www.facebook.com/whartonforminnesota2018/" target="_blank" />
+                   <Image src={require('../assets/images/candidateImages/bob-carney_150.jpg')} size="tiny" href="http://www.votebobagain.com/" target="_blank" />
                 </Grid.Column>
                 <Grid.Column width={12}>
-                 <span>"Just know I may have officially left the race but I will be submitting as a write in candidate for the office of Governor of Minnesota....We need change and we will strive to make history, We need accountability and I have heard enough garbage from these other candidates to make me seriously puke."</span>
+                <span>"A perennial candidate for office with a focus on transportation issues, Bob "Again" Carney, Jr. recently suspended a campaign for mayor of Minneapolis to join the growing field for Governor.</span>
                  </Grid.Column>
             </Grid.Row>
         </Grid>
@@ -220,24 +219,7 @@ const Candidates =() => (
                  </Grid.Column>
             </Grid.Row>
         </Grid>
-        <br />
-
-      <Label as='a' color='red' href="http://www.votebobagain.com/" target="_blank" ribbon>Bob Carney</Label>
-        <span>GOP</span>
-
-        <br />
-        <Grid celled>
-            <Grid.Row>
-                <Grid.Column width={4}>
-                   <Image src={require('../assets/images/candidateImages/bob-carney_150.jpg')} size="tiny" href="http://www.votebobagain.com/" target="_blank" />
-                </Grid.Column>
-                <Grid.Column width={12}>
-                <span>"A perennial candidate for office with a focus on transportation issues, Bob "Again" Carney, Jr. recently suspended a campaign for mayor of Minneapolis to join the growing field for Governor.</span>
-                 </Grid.Column>
-            </Grid.Row>
-        </Grid>
-        <br />
-        
+        <br />    
 
       <Label as='a' color='red' href="https://lancejohnson4governor2018.com/" target="_blank" ribbon>Lance Johnson</Label>
         <span>GOP</span>
@@ -254,6 +236,23 @@ const Candidates =() => (
             </Grid.Row>
         </Grid>
         <br />
+
+        <Label as='a' color='red' href="https://www.facebook.com/whartonforminnesota2018/" target="_blank" ribbon>Jeffrey Ryan Wharton</Label>
+        <span>GOP</span>
+
+           <br />
+        <Grid celled>
+            <Grid.Row>
+                <Grid.Column width={4}>
+                   <Image src={require('../assets/images/candidateImages/jeffrey-ryan-wharton.jpg')} size="tiny" href="https://www.facebook.com/whartonforminnesota2018/" target="_blank" />
+                </Grid.Column>
+                <Grid.Column width={12}>
+                 <span>"Just know I may have officially left the race but I will be submitting as a write in candidate for the office of Governor of Minnesota....We need change and we will strive to make history, We need accountability and I have heard enough garbage from these other candidates to make me seriously puke."</span>
+                 </Grid.Column>
+            </Grid.Row>
+        </Grid>
+        <br />
+
       </Segment>
     </Grid.Column>
   </Grid>

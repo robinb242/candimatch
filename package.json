@@ -1,7 +1,7 @@
 {
-  "name": "mern",
+  "name": "candiMatch",
   "version": "1.0.0",
-  "description": "Mern Demo",
+  "description": "Voter/Candidate matching application",
   "main": "server.js",
   "scripts": {
     "server": "node server.js",
@@ -10,7 +10,7 @@
     "build": "node scripts/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Robin Bertuccelli, Max Adams, LeAnn Sawatzky, and Chris Young",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.5.0",
