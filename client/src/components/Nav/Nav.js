@@ -14,7 +14,7 @@ export default class Nav extends Component {
     const { activeItem } = this.state
 
     return (
-      <Container>
+    
       <Menu id="NavMenu">
         <Menu.Item header>CandiMatch</Menu.Item>
         <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick}>
@@ -34,7 +34,7 @@ export default class Nav extends Component {
           </Menu.Item>
         </Menu.Menu>
       </Menu>
-      </Container>
+     
     )
   }
 }
