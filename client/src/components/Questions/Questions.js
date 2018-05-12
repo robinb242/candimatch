@@ -29,12 +29,12 @@ handleChange= (event, data) => {
     <Grid.Column width={16}>
 
     <Segment stacked>
-      <h2>ISSUE 'A'</h2>
+      <h2>ENERGY & ENVIRONMENT</h2>
   
         <Form>
         <Grid.Column width={10}>
         
-          <h3>QUESTION A-1</h3>
+          <h3>I support government funding for the development of renewable energy (e.g. solar, wind, geothermal).</h3>
         
           <Grid.Column width={6}>
            <Form.Group widths='equal'>
@@ -110,7 +110,7 @@ handleChange= (event, data) => {
        <Form>
         <Grid.Column width={10}>
         
-          <h3>QUESTION A-2</h3>
+          <h3>I support federal regulation of greenhouse gas emmissions.</h3>
         
           <Grid.Column width={6}>
            <Form.Group widths='equal'>
@@ -186,7 +186,7 @@ handleChange= (event, data) => {
        <Form>
         <Grid.Column width={10}>
         
-          <h3>QUESTION A-3</h3>
+          <h3>I support the use of hydraulic fracking to extract oil and natural gas resources.</h3>
         
           <Grid.Column width={6}>
            <Form.Group widths='equal'>
@@ -261,12 +261,12 @@ handleChange= (event, data) => {
     </Segment>
 
      <Segment stacked>
-      <h2>ISSUE 'B'</h2>
+      <h2>MARIJUANA</h2>
   
         <Form>
         <Grid.Column width={10}>
         
-          <h3>QUESTION B-1</h3>
+          <h3>I support the legalization of medical marijuana.</h3>
         
           <Grid.Column width={6}>
            <Form.Group widths='equal'>
@@ -342,7 +342,7 @@ handleChange= (event, data) => {
        <Form>
         <Grid.Column width={10}>
         
-          <h3>QUESTION B-2</h3>
+          <h3>I support the legalization of marijuana for recreational purposes.</h3>
         
           <Grid.Column width={6}>
            <Form.Group widths='equal'>
@@ -418,7 +418,7 @@ handleChange= (event, data) => {
        <Form>
         <Grid.Column width={10}>
         
-          <h3>QUESTION A-3</h3>
+          <h3>I support lower minimum sentences for non-violent drug offenders in order to reduce prison overcrowding.</h3>
         
           <Grid.Column width={6}>
            <Form.Group widths='equal'>
@@ -493,12 +493,12 @@ handleChange= (event, data) => {
     </Segment>
 
      <Segment stacked>
-      <h2>ISSUE 'C'</h2>
+      <h2>BUDGET</h2>
   
         <Form>
         <Grid.Column width={10}>
         
-          <h3>QUESTION C-1</h3>
+          <h3>I support increasing taxes if it is necessary, in order to balance the budget.</h3>
         
           <Grid.Column width={6}>
            <Form.Group widths='equal'>
@@ -574,7 +574,7 @@ handleChange= (event, data) => {
        <Form>
         <Grid.Column width={10}>
         
-          <h3>QUESTION C-2</h3>
+          <h3>I support decreasing defense spending in order to balance the budget.</h3>
         
           <Grid.Column width={6}>
            <Form.Group widths='equal'>
@@ -650,7 +650,7 @@ handleChange= (event, data) => {
        <Form>
         <Grid.Column width={10}>
         
-          <h3>QUESTION C-3</h3>
+          <h3>I support taxing the wealthiest people at a higher rate.</h3>
         
           <Grid.Column width={6}>
            <Form.Group widths='equal'>

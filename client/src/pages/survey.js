@@ -19,13 +19,13 @@ class Survey extends React.Component {
 	    		<Grid.Column width={16}>
 
 			      <Container textAlign='center'>
-			      	<b>TAKE THE SURVEY TO FIND A CANDIDATE WHOSE VALUES MOST CLOSELY MATCH YOUR VALUES.</b>
+			      	<b>TAKE THE SURVEY TO FIND A CANDIDATE WHO'S VALUES MOST CLOSELY MATCH YOUR VALUES.</b>
 			          
 			        <Divider />
 
 			        <p>Review the following statements regarding each of the issues and select the column that most closely matches your level of agreement.</p>
 			        
-			        <p>More Instructions.</p>
+			        <p></p>
 
 			        <div>
 			        	<Questions />
