@@ -84,7 +84,7 @@ To set up this application locally on your computer, perform the following steps
 1. [Clone the repository](#clone-repository)
 2. [Install Node.js](#install-node)
 3. [Install the dependencies](#dependencies)
-4. [Install MySQL Workbench](#install-mysql)
+4. [Install Robo 3T](#install-mysql)
 5. [Set up a development database](#database-setup)
 7. [Verify database connection information](#db-connect)
 8. [Start the server](#start-server)
@@ -121,21 +121,12 @@ The first step is to clone the project repository to a local directory on your c
 	  <li><b>assets/src/petMatch</b>: Contains the front end Javascript used to run through the list of assessment questions and come up with a potential pet match for a user.</li
     </ul>
   </li>
-  <li>
-    <p><b>models</b>: Contains information used to manage the application data and interact with the database. The models describe the structure of the database tables, and the datatypes that each column of the table can contain. For this project, the database includes two models:</p>
-	<ul>
-		<li><p><b>match.js</b>: This defines the sequelize model for saving users' assessment results to the MySQL database. The model defines a database table that has two columns (one for the assessent results and one for the match rating).</p>
-    </li>
-      <img src="readme_images/match_model.png">
-
-		<li><p><b>pets.js</b>: This defines the sequelize model for saving any pets that the user likes to the MySQL database. The model defines a database table that includes columns for pet name, pet shelter location, shelter contact information, and whether or not the user likes the pet.</p>
-    </li>
-    <img src="readme_images/pet_model.png">
+   
   <li>
     <p><b>db/schema.sql</b>: Contains code that you can run to create and set up a MySQL database locally on you computer.</li>
   </li>
   <li>
-    <p><b>config</b>: Contains the config.json file, whic includes the code to connect Node to MySQL.
+    <p><b>config</b>: Contains the config.json file, whic includes the code to connect Node to MongoDB.
   </li>
   <li>
     <p><b>controllers</b>: Contains two files.<p>
@@ -143,66 +134,36 @@ The first step is to clone the project repository to a local directory on your c
 			<li><b>petMatchController.js</b>, which contains different routes for getting and posting user assessment results. These routes are used to pass information to and from the view and model objects.</li>
 			<li><b>savedPetsController.js</b>, which contains different routes for posting liked pet information to the database, getting pet data from the database, and deleting liked pet information from the database.</li>
 		</ul>
-  <li>
-    <p><b>views</b>: Contains the Handlebars files, which are small, resuable blocks of code used to generate the HTML files.</p> 
-  </li>
+  
   <li><b>package.json</b>: Lists the project dependencies (third party npm packages) and their version numbers.</li>
   <li><b>.gitignore</b>: Anything listed inside this file will not be tracked by GitHub when code is committed.</li>
-  <li><b>package-lock.json</b>: Dependency tree for the project. Lists all the dependencies and their versions.</li>
-  <li><b>data/animal.js</b>: This file includes an array of objects, which is where the pet compatibility data is stored.</li>
+  <li><b>package-lock.json</b>: Dependency tree for the project. Lists all the dependencies and their versions. One for the server side dependencies and another for the client side dependencies</li>
 </ul>
 
-### <a name="install-node"></a> 2. Install Node.js
-<p>If you don't already have Node.js installed on your computer, you can install the latest version here: https://nodejs.org/en/.</p>
 
-### <a name="dependencies"></a> 3. Install the dependencies
-<p>The following npm packages are dependencies to the project.</p>
-<p>After you clone the repository to a local directory, change directory to the project root directory and run the following command to install the required npm packages:</p>
-<pre>npm install</pre>
-<ul>
-	<li><b>express</b> -  a Node.js web application framework (https://www.npmjs.com/package/express).</li>
-	<li><b>body-parser</b> - used to parse incoming request bodies in a middleware. (https://www.npmjs.com/package/body-parser)</li>
-	
-</ul>
+## Starting the app locally
 
-<p>Version information for each of these packages is available in the <b>package.json</b> file in the project root directory.</p>
+Start by installing front and backend dependencies. While in this directory, run the following commands:
 
-### <a name="install-mysql"></a> 4. Install MySQL Workbench
-<p>If you don't already have Robo 3T installed on your computer, you can install the latest version here: https://robomongo.org/download/</p>
-<p>For this project, Robo 3T is used to visually design, create, and manage the database used to store pet data.</p>
+Start MongoDB server: Open a new terminal window and type the following command.
 
-### <a name="database-setup"></a> 5. Set up a development database
-To set up a development database that you can use with this application, perform the following steps:
-<ol>
-<li><p>Open the <b>db/schema.sql</b> file and paste the contents of this file into Robo 3T.</p></li>
-<li><p>Execute the following statements:</p>
-  <pre>
-  CREATE DATABASE petMatchDB;
-  USE petM
-  </pre>
-  <p>Running these statements creates a database called <b>petMatchDB</b> and sets it as the current database being used.</p>
-</li>
-</ol>
+```
+mongod
 
-### <a name="db-connect">7. Verify database connection information</a>
-<p>Open the <b>config/config.json</b> file and verify that the database connection information (host, username, password, and database) in the development section reflects the database you just created.</p>
-<p>Modify the connection properties as needed to reflect your database instance.</p>
-<p>For example:</p>
-<pre>
-{
-  "development": {
-    "username": "root",
-    "password": "",
-    "database": "petMatchDB",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-</pre>
+```
+Go back to the terminal window open to the candiMatch directory and run.
+```
+yarn install
+cd client
+yarn install
+cd ../
+```
+After both installations complete, run the following command in your terminal:
 
-### <a name="start-server">8. Start the server</a>
-<p>After performing all of the setup steps in the <b>Getting started</b> section, navigate to the project root directory (candiMatch) and run the following command to start the server:</p>
-<pre>
+```
 yarn start
+```
+That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
 </pre>
 <p>This will concurrently run "nodemon server.js" and "npm run client" </p>
 <p>To verify that the server has started and the application is working locally on your computer, open Chrome and go to <a href="http://localhost:3000">http://localhost:3000</a>.</p>
@@ -229,10 +190,12 @@ yarn start
 * ES6 ()
 
 ### <a name="New Technologies"></a> New Technologies
+* Semantic-UI-React - New CSS library
+* ESLink - ES6 and Javascript Linter plugin utility for Sublime Text 
 
 ## <a name="design-improvements"></a> Design improvements
 * Add more research options links and provide more content on candidates platforms. 
-* Scale to other races and locations
+* Scale to other political races and locations
 
 ## <a name ="Issues"></a> Issues
 <p>If you find an issue while using the app or have a request, <a href="https://github.com/robinb242/candiMatch/issues" target="_blank">log the issue or request here</a>. These issues will be addressed in a future code update.</p>
@@ -243,24 +206,7 @@ This setup allows for a Node/Express/React app which can be easily deployed to H
 
 The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
 
-## Starting the app locally
 
-Start by installing front and backend dependencies. While in this directory, run the following commands:
-
-```
-yarn install
-cd client
-yarn install
-cd ..
-``
-
-After both installations complete, run the following command in your terminal:
-
-```
-yarn start
-```
-
-That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
 
 ## Deployment (Heroku)
 
