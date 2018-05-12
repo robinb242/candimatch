@@ -61,7 +61,7 @@ This project uses React, Node.js, Express, React Router, MongoDB, and Semantic U
 ## <a name="getting-started"></a> Getting started
 The following section will take you through the steps of setting up this application and getting it running locally on your computer.
 
-If you don't want to set up this project locally and just want to see the deployed application, go to  https://candiMatch.herokuapp.com/
+If you don't want to set up this project locally and just want to see the deployed application, go to  https://protected-lake-93815.herokuapp.com/
 
 To set up this application locally on your computer, perform the following steps:
 1. [Clone the repository](#clone-repository)

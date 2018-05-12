@@ -9,7 +9,7 @@ import Survey from './pages/survey';
 import userPage from './pages/userPage';
 import CandiLogIn from './components/CandiLogIn';
 import "./App.css";
-
+{/* main collection of routes to pages and components*/}
 
 const App = () => (
 <Router>
