@@ -3,9 +3,8 @@ import VertMenu from '../components/VertMenu';
 import { Menu, Grid, Container, Divider, Image, Button } from 'semantic-ui-react'
 import {Link} from 'react-router-dom';
 import "./home.css";
+
 {/* MAIN BODY*/}  
-
-
 
 class Home extends React.Component {
   handleClick = (event) => {
