@@ -703,7 +703,7 @@ handleChange= (event, data) => {
               <label>Agree</label>
               <Checkbox
                 type = 'radio'
-                nname='Ans-C3'
+                name='Ans-C3'
                 value='6'
                 onChange={this.handleChange}
               />
