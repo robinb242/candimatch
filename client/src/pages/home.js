@@ -31,7 +31,7 @@ class Home extends React.Component {
                
               <br />
 
-                <div className ="ui inverted segment">
+                <div className ="ui inverted light grey segment">
                   <Link
                   to="/survey"
                     onClick={this.handleClick}
