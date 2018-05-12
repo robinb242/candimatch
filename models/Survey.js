@@ -1,15 +1,18 @@
-const Schema = require("mongoose").Schema;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const Survey = new Schema({
+const surveySchema = new Schema({
 	title: {
 		type: String,
 		required: true,
 	},
-	questions: {
+	questions: [{
 		type: Schema.Types.ObjectId,
-		ref: "Quesiton",
-	},
+		ref: "Question",
+	}],
 });
+
+const Survey = mongoose.model('Survey', surveySchema);
 
 module.exports = Survey;
 
