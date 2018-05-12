@@ -20,74 +20,74 @@ const UserPage = () => (
 
           <Table.Row>
             <Table.Cell colSpan='3'>
-              <Label ribbon>Issue 'A'</Label>
+              <Label ribbon>ENERGY & ENVIRONMENT</Label>
             </Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell>Question A-1</Table.Cell>
-            <Table.Cell>My_Ans-A1</Table.Cell>
-            <Table.Cell>Cand1_Ans-A1</Table.Cell>
-            <Table.Cell>Cand2_Ans-A1</Table.Cell>
+            <Table.Cell>I support government funding for the development of renewable energy (e.g. solar, wind, geothermal).</Table.Cell>
+            <Table.Cell>Agree</Table.Cell>
+            <Table.Cell>Agree</Table.Cell>
+            <Table.Cell>Strongly Agree</Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell>Question A-2</Table.Cell>
-            <Table.Cell>My_Ans-A2</Table.Cell>
-            <Table.Cell>Cand1_Ans-A2</Table.Cell>
-            <Table.Cell>Cand2_Ans-A2</Table.Cell>
+            <Table.Cell>I support federal regulation of greenhouse gas emmissions.</Table.Cell>
+            <Table.Cell>Somewhat Agree</Table.Cell>
+            <Table.Cell>Agree</Table.Cell>
+            <Table.Cell>Agree</Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell>Question A-3</Table.Cell>
-            <Table.Cell>My_Ans-A3</Table.Cell>
-            <Table.Cell>Cand1_Ans-A3</Table.Cell>
-            <Table.Cell>Cand2_Ans-A3</Table.Cell>
+            <Table.Cell>I support the use of hydraulic fracking to extract oil and natural gas resources.</Table.Cell>
+            <Table.Cell>Somewhat Disagree</Table.Cell>
+            <Table.Cell>Disagree</Table.Cell>
+            <Table.Cell>Strongly Disagree</Table.Cell>
           </Table.Row>
 
           <Table.Row>
             <Table.Cell colSpan='3'>
-              <Label ribbon>Issue 'B'</Label>
+              <Label ribbon>MARIJUANA</Label>
             </Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell>Question B-1</Table.Cell>
-            <Table.Cell>My_Ans-B1</Table.Cell>
-            <Table.Cell>Cand1_Ans-B1</Table.Cell>
-            <Table.Cell>Cand2_Ans-B1</Table.Cell>
+            <Table.Cell>I support the legalization of medical marijuana.</Table.Cell>
+            <Table.Cell>Strongly Agree</Table.Cell>
+            <Table.Cell>Strongly Agree</Table.Cell>
+            <Table.Cell>Agree</Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell>Question B-2</Table.Cell>
-            <Table.Cell>My_Ans-B2</Table.Cell>
-            <Table.Cell>Cand1_Ans-B2</Table.Cell>
-            <Table.Cell>Cand2_Ans-B2</Table.Cell>
+            <Table.Cell>I support the legalization of marijuana for recreational purposes.</Table.Cell>
+            <Table.Cell>Somewhat Disagree</Table.Cell>
+            <Table.Cell>Agree</Table.Cell>
+            <Table.Cell>Strongly Agree</Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell>Question B-3</Table.Cell>
-            <Table.Cell>My_Ans-B3</Table.Cell>
-            <Table.Cell>Cand1_Ans-B3</Table.Cell>
-            <Table.Cell>Cand2_Ans-B3</Table.Cell>
+            <Table.Cell>I support lower minimum sentences for non-violent drug offenders in order to reduce prison overcrowding.</Table.Cell>
+            <Table.Cell>Somewhat Agree</Table.Cell>
+            <Table.Cell>Agree</Table.Cell>
+            <Table.Cell>Strongly Agree</Table.Cell>
           </Table.Row>
 
           <Table.Row>
             <Table.Cell colSpan='3'>
-              <Label ribbon>Issue 'C'</Label>
+              <Label ribbon>BUDGET</Label>
             </Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell>Question C-1</Table.Cell>
-            <Table.Cell>My_Ans-C1</Table.Cell>
-            <Table.Cell>Cand1_Ans-C1</Table.Cell>
-            <Table.Cell>Cand2_Ans-C1</Table.Cell>
+            <Table.Cell>I support increasing taxes if it is necessary, in order to balance the budget.</Table.Cell>
+            <Table.Cell>Disagree</Table.Cell>
+            <Table.Cell>Somewhat Agree</Table.Cell>
+            <Table.Cell>Strongly Agree</Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell>Question C-2</Table.Cell>
-            <Table.Cell>My_Ans-C2</Table.Cell>
-            <Table.Cell>Cand1_Ans-C2</Table.Cell>
-            <Table.Cell>Cand2_Ans-C2</Table.Cell>
+            <Table.Cell>I support decreasing defense spending in order to balance the budget.</Table.Cell>
+            <Table.Cell>Somewhat Agree</Table.Cell>
+            <Table.Cell>Agree</Table.Cell>
+            <Table.Cell>Agree</Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell>Question C-3</Table.Cell>
-            <Table.Cell>My_Ans-C3</Table.Cell>
-            <Table.Cell>Cand1_Ans-C3</Table.Cell>
-            <Table.Cell>Cand2_Ans-C3</Table.Cell>
+            <Table.Cell>I support taxing the wealthiest people at a higher rate.</Table.Cell>
+            <Table.Cell>Agree</Table.Cell>
+            <Table.Cell>Somewhat Agree</Table.Cell>
+            <Table.Cell>Strongly Agree</Table.Cell>
           </Table.Row>
 
         </Table.Body>
