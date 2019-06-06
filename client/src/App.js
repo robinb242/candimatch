@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react';
+import React from 'react';
 import Nav from './components/Nav';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Footer from './components/Footer';
@@ -9,6 +9,7 @@ import Survey from './pages/survey';
 import userPage from './pages/userPage';
 import CandiLogIn from './components/CandiLogIn';
 import "./App.css";
+
 {/* main collection of routes to pages and components*/}
 
 const App = () => (

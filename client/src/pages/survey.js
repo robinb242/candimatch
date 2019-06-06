@@ -1,6 +1,5 @@
 import React from "react";
-import VertMenu from '../components/VertMenu';
-import { Menu, Grid, Container, Divider, Image, Button } from 'semantic-ui-react'
+import { Grid, Container, Divider, } from 'semantic-ui-react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Questions from '../components/Questions';
 import {Link} from 'react-router-dom';

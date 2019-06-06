@@ -1,9 +1,9 @@
 
-import React, { Component } from 'react';
+import React from 'react';
 import _ from 'lodash'
 // import './Candidate.css';
 import {
-   Card, Container,  Grid, Header, Icon, Label, Image, Segment, Divider
+    Container, Grid, Label, Image, Segment, 
 } from 'semantic-ui-react';
 import "./candidates.css";
 

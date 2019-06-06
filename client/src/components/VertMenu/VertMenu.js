@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Menu, Image, Icon } from 'semantic-ui-react';
+import { Menu, Image } from 'semantic-ui-react';
 import "./VertMenu.css";
 
 export default class VertMenu extends Component {

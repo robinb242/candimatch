@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {
-  Form, Checkbox, Button, Card, Statistic, Container, Rail, Grid, Header, Icon, Image, Item, Label, Menu, Segment, Sticky, Step, Table, Divider, Dropdown, Modal
+  Form, Checkbox, Grid, Header, Segment,
 } from 'semantic-ui-react'
 import "./Questions.css";
 
