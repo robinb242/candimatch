@@ -10,7 +10,7 @@
     "build": "node scripts/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Robin Bertuccelli, Max Adams, LeAnn Sawatzky, and Chris Young",
+  "author": "Robin Bertuccelli and LeAnn Sawatzky",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.6.1",
